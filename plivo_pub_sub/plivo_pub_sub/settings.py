@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -174,3 +175,23 @@ LOGGING = {
         },
     },
 }
+
+# Pub/Sub Configuration
+# API Keys for authentication
+PUBSUB_API_KEYS = os.environ.get(
+    'PUBSUB_API_KEYS', 'plivo-test-key,demo-key,test-123').split(',')
+
+# Subscriber queue configuration
+PUBSUB_SUBSCRIBER_QUEUE_SIZE = int(
+    os.environ.get('PUBSUB_SUBSCRIBER_QUEUE_SIZE', '50'))
+PUBSUB_SLOW_CONSUMER_THRESHOLD = int(
+    os.environ.get('PUBSUB_SLOW_CONSUMER_THRESHOLD', '3'))
+
+# Topic configuration
+PUBSUB_DEFAULT_RING_BUFFER_SIZE = int(
+    os.environ.get('PUBSUB_DEFAULT_RING_BUFFER_SIZE', '100'))
+PUBSUB_MAX_RING_BUFFER_SIZE = int(
+    os.environ.get('PUBSUB_MAX_RING_BUFFER_SIZE', '10000'))
+
+# Shutdown configuration
+PUBSUB_SHUTDOWN_TIMEOUT = int(os.environ.get('PUBSUB_SHUTDOWN_TIMEOUT', '30'))

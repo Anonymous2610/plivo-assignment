@@ -3,6 +3,7 @@ import uuid
 import time
 import asyncio
 import logging
+from django.conf import settings
 from channels.generic.websocket import AsyncWebsocketConsumer
 from .state import manager, Message, Subscriber
 
@@ -11,6 +12,31 @@ logger = logging.getLogger(__name__)
 
 class PubSubConsumer(AsyncWebsocketConsumer):
     async def connect(self):
+        # Check for API key authentication
+        api_key = None
+
+        # Check query parameters first
+        query_string = self.scope.get('query_string', b'').decode()
+        query_params = {}
+        if query_string:
+            for param in query_string.split('&'):
+                if '=' in param:
+                    key, value = param.split('=', 1)
+                    query_params[key] = value
+        api_key = query_params.get('api_key')
+
+        # Check headers if not in query params
+        if not api_key:
+            headers = dict(self.scope.get('headers', []))
+            api_key = headers.get(b'x-api-key', b'').decode() or None
+
+        # Validate API key
+        if not self._validate_api_key(api_key):
+            logger.warning(
+                f"WebSocket connection rejected: Invalid or missing API key. Provided: {api_key}")
+            await self.close(code=1008)  # Policy violation
+            return
+
         await self.accept()
         self.client_id = str(uuid.uuid4())
         self.subscribed_topics = set()
@@ -28,6 +54,12 @@ class PubSubConsumer(AsyncWebsocketConsumer):
         logger.info(f"WebSocket client disconnected: {self.client_id}")
 
     async def receive(self, text_data):
+        # Check if shutdown is initiated
+        if manager.shutdown_initiated:
+            await self._send_error(None, "SERVICE_UNAVAILABLE", "Server is shutting down")
+            await self.close(code=1001)  # Going away
+            return
+
         try:
             data = json.loads(text_data)
             message_type = data.get('type')
@@ -76,8 +108,10 @@ class PubSubConsumer(AsyncWebsocketConsumer):
                 return
             topic_obj = await manager.get_topic(topic)
 
-        # Create subscriber
-        subscriber = Subscriber(client_id=client_id, ws=self, last_n=last_n)
+        # Create subscriber with configured queue size
+        queue_size = getattr(settings, 'PUBSUB_SUBSCRIBER_QUEUE_SIZE', 50)
+        subscriber = Subscriber(client_id=client_id,
+                                ws=self, last_n=last_n, queue_size=queue_size)
         await topic_obj.add_subscriber(subscriber)
         self.subscribed_topics.add(topic)
         # Store user-provided client_id
@@ -283,3 +317,14 @@ class PubSubConsumer(AsyncWebsocketConsumer):
         if request_id:
             response["request_id"] = request_id
         await self.send(text_data=json.dumps(response))
+
+    def _validate_api_key(self, api_key: str) -> bool:
+        """
+        Validate API key using configured valid keys from settings.
+        """
+        if not api_key:
+            return False
+
+        valid_keys = getattr(settings, 'PUBSUB_API_KEYS', [
+                             'plivo-test-key', 'demo-key', 'test-123'])
+        return api_key in valid_keys

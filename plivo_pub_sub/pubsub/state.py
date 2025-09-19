@@ -4,6 +4,7 @@ import logging
 from collections import deque
 from typing import Dict, List, Optional, Any
 from dataclasses import dataclass
+from django.conf import settings
 
 logger = logging.getLogger(__name__)
 
@@ -24,12 +25,16 @@ class Subscriber:
     Represents a single WebSocket subscriber.
     Queue is bounded to provide backpressure.
     """
-    def __init__(self, client_id: str, ws, last_n: int = 0, queue_size: int = 50):
+
+    def __init__(self, client_id: str, ws, last_n: int = 0, queue_size: int = None):
         self.client_id = client_id
         self.ws = ws
         self.last_n = last_n
+        if queue_size is None:
+            queue_size = getattr(settings, 'PUBSUB_SUBSCRIBER_QUEUE_SIZE', 50)
         self.queue: asyncio.Queue[Message] = asyncio.Queue(maxsize=queue_size)
-        self.slow_consumer_threshold = 3  # Number of drops before disconnecting
+        self.slow_consumer_threshold = getattr(
+            settings, 'PUBSUB_SLOW_CONSUMER_THRESHOLD', 3)
         self.drop_count = 0
 
 
@@ -38,10 +43,15 @@ class Topic:
     Holds messages and subscribers for a single topic.
     Subscribers are stored in a dict keyed by client_id.
     """
-    def __init__(self, name: str, ring_size: int = 100):
+
+    def __init__(self, name: str, ring_size: int = None):
         self.name = name
         self.subscribers: Dict[str, Subscriber] = {}       # <-- dict, not set
+        if ring_size is None:
+            ring_size = getattr(
+                settings, 'PUBSUB_DEFAULT_RING_BUFFER_SIZE', 100)
         self.history: deque[Message] = deque(maxlen=ring_size)
+        self.ring_size = ring_size  # Store for configuration access
         self.lock = asyncio.Lock()
         self.message_count = 0
 
@@ -74,7 +84,7 @@ class Topic:
             self.history.append(message)
             self.message_count += 1
             slow_consumers = []
-            
+
             for sub in self.subscribers.values():
                 try:
                     sub.queue.put_nowait(message)
@@ -88,24 +98,24 @@ class Topic:
                         sub.drop_count += 1
                         logger.warning("Queue full: dropped oldest for %s on topic %s (drop count: %d)",
                                        sub.client_id, self.name, sub.drop_count)
-                        
+
                         # Check if subscriber should be disconnected
                         if sub.drop_count >= sub.slow_consumer_threshold:
                             slow_consumers.append(sub)
                     except asyncio.QueueEmpty:
                         pass  # very unlikely immediately after QueueFull
-            
+
             # Disconnect slow consumers outside the main loop
             for slow_sub in slow_consumers:
                 logger.error("Disconnecting slow consumer %s from topic %s (exceeded threshold)",
-                           slow_sub.client_id, self.name)
+                             slow_sub.client_id, self.name)
                 try:
-                    await slow_sub.ws._send_error(None, "SLOW_CONSUMER", 
-                                                "Consumer too slow, disconnecting")
+                    await slow_sub.ws._send_error(None, "SLOW_CONSUMER",
+                                                  "Consumer too slow, disconnecting")
                     await slow_sub.ws.close(code=1008)  # Policy violation
                 except Exception as e:
-                    logger.warning("Error disconnecting slow consumer %s: %s", 
-                                 slow_sub.client_id, e)
+                    logger.warning("Error disconnecting slow consumer %s: %s",
+                                   slow_sub.client_id, e)
                 # Remove from subscribers
                 self.subscribers.pop(slow_sub.client_id, None)
 
@@ -124,6 +134,7 @@ class TopicManager:
     Global manager for all topics.
     Provides concurrency-safe operations.
     """
+
     def __init__(self) -> None:
         self.topics: Dict[str, Topic] = {}
         self.lock = asyncio.Lock()
@@ -131,17 +142,19 @@ class TopicManager:
         self.shutdown_initiated = False
         self.shutdown_event = asyncio.Event()
 
-    async def create_topic(self, name: str) -> bool:
+    async def create_topic(self, name: str, ring_size: int = None) -> bool:
         if self.shutdown_initiated:
             logger.warning("Cannot create topic during shutdown: %s", name)
             return False
-            
+
         async with self.lock:
             if name in self.topics:
                 logger.warning("Topic '%s' already exists", name)
                 return False
-            self.topics[name] = Topic(name)
-            logger.info("Created topic: %s", name)
+            topic = Topic(name, ring_size=ring_size)
+            self.topics[name] = topic
+            logger.info("Created topic: %s with ring buffer size: %d",
+                        name, topic.ring_size)
             return True
 
     async def delete_topic(self, name: str) -> bool:
@@ -171,13 +184,20 @@ class TopicManager:
     async def list_topics(self) -> List[Dict[str, Any]]:
         async with self.lock:
             return [
-                {"name": n, "subscribers": len(t.subscribers)}
+                {
+                    "name": n,
+                    "subscribers": len(t.subscribers),
+                    "ring_buffer_size": t.ring_size,
+                    "messages_in_history": len(t.history),
+                    "total_messages": t.message_count
+                }
                 for n, t in self.topics.items()
             ]
 
     async def get_health(self) -> Dict[str, Any]:
         async with self.lock:
-            total_subscribers = sum(len(t.subscribers) for t in self.topics.values())
+            total_subscribers = sum(len(t.subscribers)
+                                    for t in self.topics.values())
             return {
                 "uptime_sec": int(time.time() - self.start_time),
                 "topics": len(self.topics),
@@ -201,7 +221,7 @@ class TopicManager:
         """
         logger.info("Initiating graceful shutdown...")
         self.shutdown_initiated = True
-        
+
         # Notify all subscribers about shutdown
         async with self.lock:
             for topic in self.topics.values():
@@ -210,27 +230,31 @@ class TopicManager:
                         await subscriber.ws._send_info("Server shutting down gracefully", topic.name)
                     except Exception as e:
                         logger.warning("Error notifying subscriber %s about shutdown: %s",
-                                     subscriber.client_id, e)
-        
+                                       subscriber.client_id, e)
+
         # Set shutdown event to notify waiting operations
         self.shutdown_event.set()
         logger.info("Shutdown initiated - no new operations accepted")
 
-    async def shutdown(self, timeout: float = 30.0) -> None:
+    async def shutdown(self, timeout: float = None) -> None:
         """
         Complete shutdown process with best-effort flush.
         """
         if not self.shutdown_initiated:
             await self.initiate_shutdown()
-            
+
+        if timeout is None:
+            timeout = getattr(settings, 'PUBSUB_SHUTDOWN_TIMEOUT', 30)
+
         logger.info("Starting shutdown process with %s second timeout", timeout)
-        
+
         # Give subscribers time to process remaining messages
         try:
             await asyncio.wait_for(self._flush_all_queues(), timeout=timeout)
         except asyncio.TimeoutError:
-            logger.warning("Timeout during queue flush, proceeding with shutdown")
-        
+            logger.warning(
+                "Timeout during queue flush, proceeding with shutdown")
+
         # Close all connections
         async with self.lock:
             total_connections = 0
@@ -240,13 +264,14 @@ class TopicManager:
                     try:
                         await subscriber.ws.close(code=1001)  # Going away
                     except Exception as e:
-                        logger.warning("Error closing subscriber %s: %s", 
-                                     subscriber.client_id, e)
+                        logger.warning("Error closing subscriber %s: %s",
+                                       subscriber.client_id, e)
                 topic.subscribers.clear()
-            
-            logger.info("Closed %d connections during shutdown", total_connections)
+
+            logger.info("Closed %d connections during shutdown",
+                        total_connections)
             self.topics.clear()
-        
+
         logger.info("Graceful shutdown completed")
 
     async def _flush_all_queues(self) -> None:
@@ -254,24 +279,24 @@ class TopicManager:
         Best-effort flush of all subscriber queues.
         """
         logger.info("Flushing all subscriber queues...")
-        
+
         while True:
             empty_count = 0
             total_queues = 0
-            
+
             async with self.lock:
                 for topic in self.topics.values():
                     for subscriber in topic.subscribers.values():
                         total_queues += 1
                         if subscriber.queue.empty():
                             empty_count += 1
-            
+
             if total_queues == 0 or empty_count == total_queues:
                 break
-                
+
             # Small delay to allow message processing
             await asyncio.sleep(0.1)
-        
+
         logger.info("Queue flush completed")
 
 
