@@ -1,0 +1,719 @@
+INFO 2025-09-19 05:23:33,942 views 66616 6205485056 REST API: Creating topic with data: {'name': 'test-topic'}
+INFO 2025-09-19 05:23:33,943 state 66616 6205485056 Created topic: test-topic
+INFO 2025-09-19 05:23:33,943 views 66616 6205485056 REST API: Successfully created topic 'test-topic'
+INFO 2025-09-19 05:23:33,948 views 66616 6205485056 REST API: Creating topic with data: {'name': 'test-topic'}
+WARNING 2025-09-19 05:23:33,948 views 66616 6205485056 REST API: Topic 'test-topic' already exists
+INFO 2025-09-19 05:23:33,959 state 66616 6205485056 Deleting topic 'test-topic' with 0 subscribers
+INFO 2025-09-19 05:23:33,959 state 66616 6205485056 Successfully deleted topic: test-topic
+WARNING 2025-09-19 05:23:33,963 state 66616 6205485056 Topic 'non-existent' not found for deletion
+INFO 2025-09-19 05:23:33,981 consumers 66616 6188658688 WebSocket client connected: 2245236a-e0fe-476e-8820-81ab600bd6d6
+INFO 2025-09-19 05:23:33,983 consumers 66616 6188658688 Subscribing test-client-1 to topic 'test-topic' with last_n=0
+INFO 2025-09-19 05:23:33,983 consumers 66616 6188658688 Creating new topic: test-topic
+INFO 2025-09-19 05:23:33,983 state 66616 6188658688 Created topic: test-topic
+INFO 2025-09-19 05:23:33,983 consumers 66616 6188658688 Successfully subscribed test-client-1 to topic 'test-topic'
+INFO 2025-09-19 05:23:33,983 consumers 66616 6188658688 Publishing message 3544e99b-2625-4c04-8973-ed1ec46b63e0 to topic 'test-topic' from 2245236a-e0fe-476e-8820-81ab600bd6d6
+INFO 2025-09-19 05:23:33,983 consumers 66616 6188658688 Successfully published message 3544e99b-2625-4c04-8973-ed1ec46b63e0 to topic 'test-topic'
+INFO 2025-09-19 05:23:35,989 consumers 66616 6188658688 WebSocket client disconnecting: 2245236a-e0fe-476e-8820-81ab600bd6d6, close_code: 1000
+INFO 2025-09-19 05:23:35,990 consumers 66616 6188658688 WebSocket client disconnected: 2245236a-e0fe-476e-8820-81ab600bd6d6
+INFO 2025-09-19 05:23:35,995 consumers 66616 6188658688 WebSocket client connected: 02b08e80-f9f9-4ce0-b4ba-11d9a1379669
+INFO 2025-09-19 05:23:35,998 consumers 66616 6188658688 WebSocket client connected: ef7857ee-4b2b-4bc8-a960-f423f21cd517
+INFO 2025-09-19 05:23:35,999 consumers 66616 6188658688 Subscribing client-1 to topic 'multi-test' with last_n=0
+INFO 2025-09-19 05:23:35,999 consumers 66616 6188658688 Creating new topic: multi-test
+INFO 2025-09-19 05:23:35,999 state 66616 6188658688 Created topic: multi-test
+INFO 2025-09-19 05:23:35,999 consumers 66616 6188658688 Successfully subscribed client-1 to topic 'multi-test'
+INFO 2025-09-19 05:23:36,000 consumers 66616 6188658688 Subscribing client-2 to topic 'multi-test' with last_n=0
+INFO 2025-09-19 05:23:36,000 consumers 66616 6188658688 Successfully subscribed client-2 to topic 'multi-test'
+INFO 2025-09-19 05:23:36,001 consumers 66616 6188658688 Publishing message 4bca454d-9c97-4f22-b5f2-8ae6e9bb6320 to topic 'multi-test' from 02b08e80-f9f9-4ce0-b4ba-11d9a1379669
+INFO 2025-09-19 05:23:36,001 consumers 66616 6188658688 Successfully published message 4bca454d-9c97-4f22-b5f2-8ae6e9bb6320 to topic 'multi-test'
+INFO 2025-09-19 05:23:38,005 consumers 66616 6188658688 WebSocket client disconnecting: ef7857ee-4b2b-4bc8-a960-f423f21cd517, close_code: 1000
+INFO 2025-09-19 05:23:38,006 consumers 66616 6188658688 WebSocket client disconnected: ef7857ee-4b2b-4bc8-a960-f423f21cd517
+INFO 2025-09-19 05:23:38,006 consumers 66616 6188658688 WebSocket client disconnecting: 02b08e80-f9f9-4ce0-b4ba-11d9a1379669, close_code: 1000
+INFO 2025-09-19 05:23:38,007 consumers 66616 6188658688 WebSocket client disconnected: 02b08e80-f9f9-4ce0-b4ba-11d9a1379669
+INFO 2025-09-19 05:24:24,161 views 66616 6239137792 REST API: Creating topic with data: {'name': 'test-topic'}
+WARNING 2025-09-19 05:24:24,162 views 66616 6239137792 REST API: Topic 'test-topic' already exists
+INFO 2025-09-19 05:24:24,167 views 66616 6239137792 REST API: Creating topic with data: {'name': 'test-topic'}
+WARNING 2025-09-19 05:24:24,167 views 66616 6239137792 REST API: Topic 'test-topic' already exists
+INFO 2025-09-19 05:24:24,176 state 66616 6239137792 Deleting topic 'test-topic' with 1 subscribers
+INFO 2025-09-19 05:24:24,176 state 66616 6239137792 Successfully deleted topic: test-topic
+WARNING 2025-09-19 05:24:24,180 state 66616 6239137792 Topic 'non-existent' not found for deletion
+INFO 2025-09-19 05:24:24,203 consumers 66616 6188658688 WebSocket client connected: 838f729f-27bb-4837-b501-2011a1db8dcf
+INFO 2025-09-19 05:24:24,204 consumers 66616 6188658688 Subscribing test-client-1 to topic 'test-topic' with last_n=0
+INFO 2025-09-19 05:24:24,204 consumers 66616 6188658688 Creating new topic: test-topic
+INFO 2025-09-19 05:24:24,204 state 66616 6188658688 Created topic: test-topic
+INFO 2025-09-19 05:24:24,204 consumers 66616 6188658688 Successfully subscribed test-client-1 to topic 'test-topic'
+INFO 2025-09-19 05:24:24,205 consumers 66616 6188658688 Publishing message d756fd87-e471-4b50-accb-b49fbad1c83b to topic 'test-topic' from 838f729f-27bb-4837-b501-2011a1db8dcf
+INFO 2025-09-19 05:24:24,205 consumers 66616 6188658688 Successfully published message d756fd87-e471-4b50-accb-b49fbad1c83b to topic 'test-topic'
+INFO 2025-09-19 05:24:26,208 consumers 66616 6188658688 WebSocket client disconnecting: 838f729f-27bb-4837-b501-2011a1db8dcf, close_code: 1000
+INFO 2025-09-19 05:24:26,208 consumers 66616 6188658688 WebSocket client disconnected: 838f729f-27bb-4837-b501-2011a1db8dcf
+INFO 2025-09-19 05:24:26,213 consumers 66616 6188658688 WebSocket client connected: ebcb6a68-222f-42fc-9a3c-99473472675e
+INFO 2025-09-19 05:24:26,218 consumers 66616 6188658688 WebSocket client connected: af6fe141-49e5-4133-9589-ebad46aa9962
+INFO 2025-09-19 05:24:26,218 consumers 66616 6188658688 Subscribing client-1 to topic 'multi-test' with last_n=0
+INFO 2025-09-19 05:24:26,218 consumers 66616 6188658688 Successfully subscribed client-1 to topic 'multi-test'
+INFO 2025-09-19 05:24:26,219 consumers 66616 6188658688 Subscribing client-2 to topic 'multi-test' with last_n=0
+INFO 2025-09-19 05:24:26,219 consumers 66616 6188658688 Successfully subscribed client-2 to topic 'multi-test'
+INFO 2025-09-19 05:24:26,220 consumers 66616 6188658688 Publishing message c6dc96ae-9005-41af-bbb3-c67c127cd6e3 to topic 'multi-test' from ebcb6a68-222f-42fc-9a3c-99473472675e
+INFO 2025-09-19 05:24:26,220 consumers 66616 6188658688 Successfully published message c6dc96ae-9005-41af-bbb3-c67c127cd6e3 to topic 'multi-test'
+INFO 2025-09-19 05:24:28,225 consumers 66616 6188658688 WebSocket client disconnecting: af6fe141-49e5-4133-9589-ebad46aa9962, close_code: 1000
+INFO 2025-09-19 05:24:28,225 consumers 66616 6188658688 WebSocket client disconnected: af6fe141-49e5-4133-9589-ebad46aa9962
+INFO 2025-09-19 05:24:28,226 consumers 66616 6188658688 WebSocket client disconnecting: ebcb6a68-222f-42fc-9a3c-99473472675e, close_code: 1000
+INFO 2025-09-19 05:24:28,226 consumers 66616 6188658688 WebSocket client disconnected: ebcb6a68-222f-42fc-9a3c-99473472675e
+INFO 2025-09-19 05:25:04,117 consumers 66616 6188658688 WebSocket client connected: fe679174-4898-467a-bfa4-3bcd2274995b
+INFO 2025-09-19 05:25:04,118 consumers 66616 6188658688 Subscribing s1 to topic 'orders' with last_n=5
+INFO 2025-09-19 05:25:04,118 consumers 66616 6188658688 Creating new topic: orders
+INFO 2025-09-19 05:25:04,118 state 66616 6188658688 Created topic: orders
+INFO 2025-09-19 05:25:04,118 consumers 66616 6188658688 Successfully subscribed s1 to topic 'orders'
+INFO 2025-09-19 05:25:04,118 consumers 66616 6188658688 Sending 0 historical messages to s1
+INFO 2025-09-19 05:25:04,118 consumers 66616 6188658688 Publishing message 550e8400-e29b-41d4-a716-446655440000 to topic 'orders' from fe679174-4898-467a-bfa4-3bcd2274995b
+INFO 2025-09-19 05:25:04,118 consumers 66616 6188658688 Successfully published message 550e8400-e29b-41d4-a716-446655440000 to topic 'orders'
+INFO 2025-09-19 05:25:06,122 consumers 66616 6188658688 WebSocket client disconnecting: fe679174-4898-467a-bfa4-3bcd2274995b, close_code: 1000
+INFO 2025-09-19 05:25:06,122 consumers 66616 6188658688 WebSocket client disconnected: fe679174-4898-467a-bfa4-3bcd2274995b
+INFO 2025-09-19 05:25:06,126 consumers 66616 6188658688 WebSocket client connected: 01399f7c-d9e9-4203-ac64-97362d683e0f
+WARNING 2025-09-19 05:25:06,127 consumers 66616 6188658688 Unknown message type from 01399f7c-d9e9-4203-ac64-97362d683e0f: invalid_type
+WARNING 2025-09-19 05:25:06,128 consumers 66616 6188658688 Subscribe failed - missing fields from 01399f7c-d9e9-4203-ac64-97362d683e0f: topic=None, client_id=None
+ERROR 2025-09-19 05:25:06,129 consumers 66616 6188658688 Invalid JSON from 01399f7c-d9e9-4203-ac64-97362d683e0f: Expecting value: line 1 column 1 (char 0)
+INFO 2025-09-19 05:25:06,129 consumers 66616 6188658688 WebSocket client disconnecting: 01399f7c-d9e9-4203-ac64-97362d683e0f, close_code: 1000
+INFO 2025-09-19 05:25:06,130 consumers 66616 6188658688 WebSocket client disconnected: 01399f7c-d9e9-4203-ac64-97362d683e0f
+INFO 2025-09-19 05:25:46,633 views 66616 6239137792 REST API: Creating topic with data: {'name': 'orders'}
+WARNING 2025-09-19 05:25:46,634 views 66616 6239137792 REST API: Topic 'orders' already exists
+INFO 2025-09-19 05:25:55,488 views 66616 6239137792 REST API: Creating topic with data: {'name': 'orders'}
+WARNING 2025-09-19 05:25:55,488 views 66616 6239137792 REST API: Topic 'orders' already exists
+INFO 2025-09-19 05:25:58,191 views 66616 6239137792 REST API: Creating topic with data: {'name': 'orders'}
+WARNING 2025-09-19 05:25:58,191 views 66616 6239137792 REST API: Topic 'orders' already exists
+INFO 2025-09-19 05:26:22,918 views 67571 6164197376 REST API: Creating topic with data: {'name': 'orders'}
+INFO 2025-09-19 05:26:22,919 state 67571 6164197376 Created topic: orders
+INFO 2025-09-19 05:26:22,919 views 67571 6164197376 REST API: Successfully created topic 'orders'
+INFO 2025-09-19 05:26:22,922 views 67571 6164197376 REST API: Creating topic with data: {'name': 'orders'}
+WARNING 2025-09-19 05:26:22,923 views 67571 6164197376 REST API: Topic 'orders' already exists
+INFO 2025-09-19 05:26:22,926 views 67571 6164197376 REST API: Creating topic with data: {'name': 'inventory'}
+INFO 2025-09-19 05:26:22,927 state 67571 6164197376 Created topic: inventory
+INFO 2025-09-19 05:26:22,927 views 67571 6164197376 REST API: Successfully created topic 'inventory'
+INFO 2025-09-19 05:26:22,936 views 67571 6164197376 REST API: Creating topic with data: {'name': 'test-health'}
+INFO 2025-09-19 05:26:22,936 state 67571 6164197376 Created topic: test-health
+INFO 2025-09-19 05:26:22,937 views 67571 6164197376 REST API: Successfully created topic 'test-health'
+INFO 2025-09-19 05:26:45,043 consumers 67571 6147371008 WebSocket client connected: ad741e2f-f223-4c40-9dc9-eada4e613c5f
+INFO 2025-09-19 05:26:45,045 consumers 67571 6147371008 WebSocket client connected: 535eff34-d8d7-44ec-b0b8-786ad56037fe
+INFO 2025-09-19 05:26:45,047 consumers 67571 6147371008 WebSocket client connected: 150a2189-f7da-463d-9fbf-b8c1ccf5e835
+INFO 2025-09-19 05:26:45,049 consumers 67571 6147371008 WebSocket client connected: b3ce0d24-b694-416e-b122-e475dc398614
+INFO 2025-09-19 05:26:45,051 consumers 67571 6147371008 WebSocket client connected: b762c9e2-c87b-461d-976e-799ccc7dabca
+INFO 2025-09-19 05:26:45,051 consumers 67571 6147371008 Subscribing client-0 to topic 'concurrency-test' with last_n=0
+INFO 2025-09-19 05:26:45,051 consumers 67571 6147371008 Creating new topic: concurrency-test
+INFO 2025-09-19 05:26:45,051 state 67571 6147371008 Created topic: concurrency-test
+INFO 2025-09-19 05:26:45,051 consumers 67571 6147371008 Successfully subscribed client-0 to topic 'concurrency-test'
+INFO 2025-09-19 05:26:45,052 consumers 67571 6147371008 Subscribing client-1 to topic 'concurrency-test' with last_n=0
+INFO 2025-09-19 05:26:45,052 consumers 67571 6147371008 Successfully subscribed client-1 to topic 'concurrency-test'
+INFO 2025-09-19 05:26:45,052 consumers 67571 6147371008 Subscribing client-2 to topic 'concurrency-test' with last_n=0
+INFO 2025-09-19 05:26:45,052 consumers 67571 6147371008 Successfully subscribed client-2 to topic 'concurrency-test'
+INFO 2025-09-19 05:26:45,053 consumers 67571 6147371008 Subscribing client-3 to topic 'concurrency-test' with last_n=0
+INFO 2025-09-19 05:26:45,053 consumers 67571 6147371008 Successfully subscribed client-3 to topic 'concurrency-test'
+INFO 2025-09-19 05:26:45,053 consumers 67571 6147371008 Subscribing client-4 to topic 'concurrency-test' with last_n=0
+INFO 2025-09-19 05:26:45,053 consumers 67571 6147371008 Successfully subscribed client-4 to topic 'concurrency-test'
+WARNING 2025-09-19 05:26:45,054 consumers 67571 6147371008 Publish failed - invalid UUID from ad741e2f-f223-4c40-9dc9-eada4e613c5f: msg-0
+WARNING 2025-09-19 05:26:45,054 consumers 67571 6147371008 Publish failed - invalid UUID from ad741e2f-f223-4c40-9dc9-eada4e613c5f: msg-1
+WARNING 2025-09-19 05:26:45,054 consumers 67571 6147371008 Publish failed - invalid UUID from ad741e2f-f223-4c40-9dc9-eada4e613c5f: msg-2
+WARNING 2025-09-19 05:26:45,055 consumers 67571 6147371008 Publish failed - invalid UUID from ad741e2f-f223-4c40-9dc9-eada4e613c5f: msg-3
+WARNING 2025-09-19 05:26:45,055 consumers 67571 6147371008 Publish failed - invalid UUID from ad741e2f-f223-4c40-9dc9-eada4e613c5f: msg-4
+WARNING 2025-09-19 05:26:45,055 consumers 67571 6147371008 Publish failed - invalid UUID from ad741e2f-f223-4c40-9dc9-eada4e613c5f: msg-5
+WARNING 2025-09-19 05:26:45,055 consumers 67571 6147371008 Publish failed - invalid UUID from ad741e2f-f223-4c40-9dc9-eada4e613c5f: msg-6
+WARNING 2025-09-19 05:26:45,055 consumers 67571 6147371008 Publish failed - invalid UUID from ad741e2f-f223-4c40-9dc9-eada4e613c5f: msg-7
+WARNING 2025-09-19 05:26:45,055 consumers 67571 6147371008 Publish failed - invalid UUID from ad741e2f-f223-4c40-9dc9-eada4e613c5f: msg-8
+WARNING 2025-09-19 05:26:45,056 consumers 67571 6147371008 Publish failed - invalid UUID from ad741e2f-f223-4c40-9dc9-eada4e613c5f: msg-9
+INFO 2025-09-19 05:26:45,056 consumers 67571 6147371008 WebSocket client connected: b647c03f-426a-40f1-bcd6-ea07d71d7e37
+INFO 2025-09-19 05:26:45,058 consumers 67571 6147371008 WebSocket client connected: c6485be4-30ed-436b-ba26-7292ceea283a
+INFO 2025-09-19 05:26:45,061 consumers 67571 6147371008 WebSocket client connected: a1c05ccf-9ffe-42a0-a468-07e1a815e71f
+INFO 2025-09-19 05:26:45,061 consumers 67571 6147371008 Subscribing subscriber-0 to topic 'fanout-test' with last_n=0
+INFO 2025-09-19 05:26:45,062 consumers 67571 6147371008 Creating new topic: fanout-test
+INFO 2025-09-19 05:26:45,062 state 67571 6147371008 Created topic: fanout-test
+INFO 2025-09-19 05:26:45,062 consumers 67571 6147371008 Successfully subscribed subscriber-0 to topic 'fanout-test'
+INFO 2025-09-19 05:26:45,062 consumers 67571 6147371008 Subscribing subscriber-1 to topic 'fanout-test' with last_n=0
+INFO 2025-09-19 05:26:45,062 consumers 67571 6147371008 Successfully subscribed subscriber-1 to topic 'fanout-test'
+INFO 2025-09-19 05:26:45,063 consumers 67571 6147371008 Subscribing subscriber-2 to topic 'fanout-test' with last_n=0
+INFO 2025-09-19 05:26:45,063 consumers 67571 6147371008 Successfully subscribed subscriber-2 to topic 'fanout-test'
+INFO 2025-09-19 05:26:45,063 consumers 67571 6147371008 Publishing message af9c18eb-374a-4909-bc29-8e7515fab565 to topic 'fanout-test' from b647c03f-426a-40f1-bcd6-ea07d71d7e37
+INFO 2025-09-19 05:26:45,063 consumers 67571 6147371008 Successfully published message af9c18eb-374a-4909-bc29-8e7515fab565 to topic 'fanout-test'
+INFO 2025-09-19 05:26:51,072 consumers 67571 6147371008 WebSocket client connected: c48517eb-57e1-4917-9fdc-30c781cec70a
+INFO 2025-09-19 05:26:51,076 consumers 67571 6147371008 WebSocket client connected: 45f0ff5b-dc19-478d-b734-dfbe7855cc0a
+INFO 2025-09-19 05:26:51,077 consumers 67571 6147371008 Subscribing subscriber-topic-1 to topic 'topic-1' with last_n=0
+INFO 2025-09-19 05:26:51,077 consumers 67571 6147371008 Creating new topic: topic-1
+INFO 2025-09-19 05:26:51,077 state 67571 6147371008 Created topic: topic-1
+INFO 2025-09-19 05:26:51,077 consumers 67571 6147371008 Successfully subscribed subscriber-topic-1 to topic 'topic-1'
+INFO 2025-09-19 05:26:51,079 consumers 67571 6147371008 Subscribing subscriber-topic-2 to topic 'topic-2' with last_n=0
+INFO 2025-09-19 05:26:51,079 consumers 67571 6147371008 Creating new topic: topic-2
+INFO 2025-09-19 05:26:51,079 state 67571 6147371008 Created topic: topic-2
+INFO 2025-09-19 05:26:51,079 consumers 67571 6147371008 Successfully subscribed subscriber-topic-2 to topic 'topic-2'
+INFO 2025-09-19 05:26:51,080 consumers 67571 6147371008 Publishing message 990de36d-5967-4151-a5e1-62a0742b0b9a to topic 'topic-1' from c48517eb-57e1-4917-9fdc-30c781cec70a
+INFO 2025-09-19 05:26:51,080 consumers 67571 6147371008 Successfully published message 990de36d-5967-4151-a5e1-62a0742b0b9a to topic 'topic-1'
+INFO 2025-09-19 05:26:51,081 consumers 67571 6147371008 Publishing message 5bd225d6-013d-4364-8c79-d312276ca50c to topic 'topic-2' from 45f0ff5b-dc19-478d-b734-dfbe7855cc0a
+INFO 2025-09-19 05:26:51,081 consumers 67571 6147371008 Successfully published message 5bd225d6-013d-4364-8c79-d312276ca50c to topic 'topic-2'
+INFO 2025-09-19 05:26:55,087 consumers 67571 6147371008 WebSocket client disconnecting: c48517eb-57e1-4917-9fdc-30c781cec70a, close_code: 1000
+INFO 2025-09-19 05:26:55,088 consumers 67571 6147371008 WebSocket client disconnected: c48517eb-57e1-4917-9fdc-30c781cec70a
+INFO 2025-09-19 05:26:55,089 consumers 67571 6147371008 WebSocket client disconnecting: 45f0ff5b-dc19-478d-b734-dfbe7855cc0a, close_code: 1000
+INFO 2025-09-19 05:26:55,089 consumers 67571 6147371008 WebSocket client disconnected: 45f0ff5b-dc19-478d-b734-dfbe7855cc0a
+INFO 2025-09-19 05:26:55,095 consumers 67571 6147371008 WebSocket client connected: 16254a62-ea77-42ee-ad59-228f73549ebd
+INFO 2025-09-19 05:26:55,096 consumers 67571 6147371008 Subscribing backpressure-client to topic 'backpressure-test' with last_n=0
+INFO 2025-09-19 05:26:55,097 consumers 67571 6147371008 Creating new topic: backpressure-test
+INFO 2025-09-19 05:26:55,097 state 67571 6147371008 Created topic: backpressure-test
+INFO 2025-09-19 05:26:55,097 consumers 67571 6147371008 Successfully subscribed backpressure-client to topic 'backpressure-test'
+INFO 2025-09-19 05:26:55,102 consumers 67571 6147371008 WebSocket client connected: 457b626a-2033-40fa-9687-f185dc7cd8fd
+WARNING 2025-09-19 05:26:55,103 consumers 67571 6147371008 Publish failed - invalid UUID from 457b626a-2033-40fa-9687-f185dc7cd8fd: backpressure-msg-0
+INFO 2025-09-19 05:27:05,107 consumers 67571 6147371008 WebSocket client disconnecting: b762c9e2-c87b-461d-976e-799ccc7dabca, close_code: 1006
+INFO 2025-09-19 05:27:05,107 consumers 67571 6147371008 WebSocket client disconnected: b762c9e2-c87b-461d-976e-799ccc7dabca
+INFO 2025-09-19 05:27:05,107 consumers 67571 6147371008 WebSocket client disconnecting: 535eff34-d8d7-44ec-b0b8-786ad56037fe, close_code: 1006
+INFO 2025-09-19 05:27:05,107 consumers 67571 6147371008 WebSocket client disconnected: 535eff34-d8d7-44ec-b0b8-786ad56037fe
+INFO 2025-09-19 05:27:05,108 consumers 67571 6147371008 WebSocket client disconnecting: b647c03f-426a-40f1-bcd6-ea07d71d7e37, close_code: 1006
+INFO 2025-09-19 05:27:05,108 consumers 67571 6147371008 WebSocket client disconnected: b647c03f-426a-40f1-bcd6-ea07d71d7e37
+INFO 2025-09-19 05:27:05,108 consumers 67571 6147371008 WebSocket client disconnecting: 150a2189-f7da-463d-9fbf-b8c1ccf5e835, close_code: 1006
+INFO 2025-09-19 05:27:05,108 consumers 67571 6147371008 WebSocket client disconnected: 150a2189-f7da-463d-9fbf-b8c1ccf5e835
+INFO 2025-09-19 05:27:05,108 consumers 67571 6147371008 WebSocket client disconnecting: c6485be4-30ed-436b-ba26-7292ceea283a, close_code: 1006
+INFO 2025-09-19 05:27:05,108 consumers 67571 6147371008 WebSocket client disconnected: c6485be4-30ed-436b-ba26-7292ceea283a
+INFO 2025-09-19 05:27:05,108 consumers 67571 6147371008 WebSocket client disconnecting: 457b626a-2033-40fa-9687-f185dc7cd8fd, close_code: 1006
+INFO 2025-09-19 05:27:05,108 consumers 67571 6147371008 WebSocket client disconnected: 457b626a-2033-40fa-9687-f185dc7cd8fd
+INFO 2025-09-19 05:27:05,108 consumers 67571 6147371008 WebSocket client disconnecting: b3ce0d24-b694-416e-b122-e475dc398614, close_code: 1006
+INFO 2025-09-19 05:27:05,108 consumers 67571 6147371008 WebSocket client disconnected: b3ce0d24-b694-416e-b122-e475dc398614
+INFO 2025-09-19 05:27:05,108 consumers 67571 6147371008 WebSocket client disconnecting: a1c05ccf-9ffe-42a0-a468-07e1a815e71f, close_code: 1006
+INFO 2025-09-19 05:27:05,108 consumers 67571 6147371008 WebSocket client disconnected: a1c05ccf-9ffe-42a0-a468-07e1a815e71f
+INFO 2025-09-19 05:27:05,108 consumers 67571 6147371008 WebSocket client disconnecting: ad741e2f-f223-4c40-9dc9-eada4e613c5f, close_code: 1006
+INFO 2025-09-19 05:27:05,108 consumers 67571 6147371008 WebSocket client disconnected: ad741e2f-f223-4c40-9dc9-eada4e613c5f
+INFO 2025-09-19 05:27:05,108 consumers 67571 6147371008 WebSocket client disconnecting: 16254a62-ea77-42ee-ad59-228f73549ebd, close_code: 1006
+INFO 2025-09-19 05:27:05,108 consumers 67571 6147371008 WebSocket client disconnected: 16254a62-ea77-42ee-ad59-228f73549ebd
+INFO 2025-09-19 05:27:07,356 consumers 67571 6147371008 WebSocket client connected: 4b35d50a-c4e2-4abb-a83d-1c73dc93b143
+WARNING 2025-09-19 05:27:07,357 consumers 67571 6147371008 Publish failed - invalid UUID from 4b35d50a-c4e2-4abb-a83d-1c73dc93b143: replay-msg-0
+INFO 2025-09-19 05:27:14,096 consumers 67571 6147371008 WebSocket client disconnecting: 4b35d50a-c4e2-4abb-a83d-1c73dc93b143, close_code: 1006
+INFO 2025-09-19 05:27:14,097 consumers 67571 6147371008 WebSocket client disconnected: 4b35d50a-c4e2-4abb-a83d-1c73dc93b143
+INFO 2025-09-19 05:27:21,940 consumers 67571 6147371008 WebSocket client connected: 9bebbe82-79d6-484b-bee0-24b8722a37af
+INFO 2025-09-19 05:27:21,953 views 67571 6181023744 REST API: Creating topic with data: {'name': 'demo-topic'}
+INFO 2025-09-19 05:27:21,953 state 67571 6181023744 Created topic: demo-topic
+INFO 2025-09-19 05:27:21,954 views 67571 6181023744 REST API: Successfully created topic 'demo-topic'
+INFO 2025-09-19 05:27:21,956 consumers 67571 6147371008 Subscribing demo-client to topic 'demo-topic' with last_n=0
+INFO 2025-09-19 05:27:21,956 consumers 67571 6147371008 Successfully subscribed demo-client to topic 'demo-topic'
+INFO 2025-09-19 05:27:21,956 consumers 67571 6147371008 Publishing message 75e2ad0e-ce94-4d15-abb9-3c59a07f3374 to topic 'demo-topic' from 9bebbe82-79d6-484b-bee0-24b8722a37af
+INFO 2025-09-19 05:27:21,956 consumers 67571 6147371008 Successfully published message 75e2ad0e-ce94-4d15-abb9-3c59a07f3374 to topic 'demo-topic'
+INFO 2025-09-19 05:27:21,957 consumers 67571 6147371008 Publishing message ad0512af-f208-4960-ac85-3fe7b75afc89 to topic 'demo-topic' from 9bebbe82-79d6-484b-bee0-24b8722a37af
+INFO 2025-09-19 05:27:21,957 consumers 67571 6147371008 Successfully published message ad0512af-f208-4960-ac85-3fe7b75afc89 to topic 'demo-topic'
+INFO 2025-09-19 05:27:26,981 consumers 67571 6147371008 WebSocket client disconnecting: 9bebbe82-79d6-484b-bee0-24b8722a37af, close_code: 1000
+INFO 2025-09-19 05:27:26,981 consumers 67571 6147371008 WebSocket client disconnected: 9bebbe82-79d6-484b-bee0-24b8722a37af
+INFO 2025-09-19 05:27:26,985 state 67571 6181023744 Deleting topic 'demo-topic' with 1 subscribers
+INFO 2025-09-19 05:27:26,985 state 67571 6181023744 Successfully deleted topic: demo-topic
+INFO 2025-09-19 05:29:30,157 views 68499 6185660416 REST API: Creating topic with data: {'name': 'test-topic'}
+INFO 2025-09-19 05:29:30,157 state 68499 6185660416 Created topic: test-topic
+INFO 2025-09-19 05:29:30,157 views 68499 6185660416 REST API: Successfully created topic 'test-topic'
+INFO 2025-09-19 05:33:09,795 consumers 68499 8226964032 WebSocket client connected: 9364e811-3566-4eec-8444-4a9f5ef0977b
+INFO 2025-09-19 05:33:09,797 consumers 68499 8226964032 Subscribing browser-client to topic 'test-topic' with last_n=0
+INFO 2025-09-19 05:33:09,798 consumers 68499 8226964032 Successfully subscribed browser-client to topic 'test-topic'
+INFO 2025-09-19 05:34:54,877 views 68499 6202486784 REST API: Creating topic with data: {'name': 'test-topic'}
+WARNING 2025-09-19 05:34:54,878 views 68499 6202486784 REST API: Topic 'test-topic' already exists
+INFO 2025-09-19 05:34:54,883 views 68499 6202486784 REST API: Creating topic with data: {'name': 'test-topic'}
+WARNING 2025-09-19 05:34:54,883 views 68499 6202486784 REST API: Topic 'test-topic' already exists
+INFO 2025-09-19 05:34:54,893 state 68499 6202486784 Deleting topic 'test-topic' with 1 subscribers
+INFO 2025-09-19 05:34:54,893 state 68499 6202486784 Successfully deleted topic: test-topic
+INFO 2025-09-19 05:34:54,894 consumers 68499 8226964032 WebSocket client disconnecting: 9364e811-3566-4eec-8444-4a9f5ef0977b, close_code: 1000
+INFO 2025-09-19 05:34:54,894 consumers 68499 8226964032 WebSocket client disconnected: 9364e811-3566-4eec-8444-4a9f5ef0977b
+WARNING 2025-09-19 05:34:54,899 state 68499 6202486784 Topic 'non-existent' not found for deletion
+INFO 2025-09-19 05:34:54,918 consumers 68499 8226964032 WebSocket client connected: f2233ba0-602c-41b8-9348-91856e0f2f6d
+INFO 2025-09-19 05:34:54,919 consumers 68499 8226964032 Subscribing test-client-1 to topic 'test-topic' with last_n=0
+INFO 2025-09-19 05:34:54,920 consumers 68499 8226964032 Creating new topic: test-topic
+INFO 2025-09-19 05:34:54,920 state 68499 8226964032 Created topic: test-topic
+INFO 2025-09-19 05:34:54,920 consumers 68499 8226964032 Successfully subscribed test-client-1 to topic 'test-topic'
+INFO 2025-09-19 05:34:54,920 consumers 68499 8226964032 Publishing message 6714c30d-8815-4f75-9acc-ef7419f81b91 to topic 'test-topic' from f2233ba0-602c-41b8-9348-91856e0f2f6d
+INFO 2025-09-19 05:34:54,920 consumers 68499 8226964032 Successfully published message 6714c30d-8815-4f75-9acc-ef7419f81b91 to topic 'test-topic'
+INFO 2025-09-19 05:34:56,927 consumers 68499 8226964032 WebSocket client disconnecting: f2233ba0-602c-41b8-9348-91856e0f2f6d, close_code: 1000
+INFO 2025-09-19 05:34:56,927 consumers 68499 8226964032 WebSocket client disconnected: f2233ba0-602c-41b8-9348-91856e0f2f6d
+INFO 2025-09-19 05:34:56,933 consumers 68499 8226964032 WebSocket client connected: 256bb037-e57c-4a85-81cc-81533a342500
+INFO 2025-09-19 05:34:56,938 consumers 68499 8226964032 WebSocket client connected: 81dbb676-ec92-4af2-a815-516893924ec6
+INFO 2025-09-19 05:34:56,939 consumers 68499 8226964032 Subscribing client-1 to topic 'multi-test' with last_n=0
+INFO 2025-09-19 05:34:56,939 consumers 68499 8226964032 Creating new topic: multi-test
+INFO 2025-09-19 05:34:56,939 state 68499 8226964032 Created topic: multi-test
+INFO 2025-09-19 05:34:56,940 consumers 68499 8226964032 Successfully subscribed client-1 to topic 'multi-test'
+INFO 2025-09-19 05:34:56,940 consumers 68499 8226964032 Subscribing client-2 to topic 'multi-test' with last_n=0
+INFO 2025-09-19 05:34:56,941 consumers 68499 8226964032 Successfully subscribed client-2 to topic 'multi-test'
+INFO 2025-09-19 05:34:56,941 consumers 68499 8226964032 Publishing message 4108612e-dd85-4766-a258-f7dd7da77dd5 to topic 'multi-test' from 256bb037-e57c-4a85-81cc-81533a342500
+INFO 2025-09-19 05:34:56,941 consumers 68499 8226964032 Successfully published message 4108612e-dd85-4766-a258-f7dd7da77dd5 to topic 'multi-test'
+INFO 2025-09-19 05:34:58,947 consumers 68499 8226964032 WebSocket client disconnecting: 81dbb676-ec92-4af2-a815-516893924ec6, close_code: 1000
+INFO 2025-09-19 05:34:58,948 consumers 68499 8226964032 WebSocket client disconnected: 81dbb676-ec92-4af2-a815-516893924ec6
+INFO 2025-09-19 05:34:58,949 consumers 68499 8226964032 WebSocket client disconnecting: 256bb037-e57c-4a85-81cc-81533a342500, close_code: 1000
+INFO 2025-09-19 05:34:58,949 consumers 68499 8226964032 WebSocket client disconnected: 256bb037-e57c-4a85-81cc-81533a342500
+INFO 2025-09-19 05:37:53,761 views 70001 6119518208 REST API: Creating topic with data: {'name': 'test-topic'}
+INFO 2025-09-19 05:37:53,761 state 70001 6119518208 Created topic: test-topic
+INFO 2025-09-19 05:37:53,761 views 70001 6119518208 REST API: Successfully created topic 'test-topic'
+INFO 2025-09-19 05:37:53,765 views 70001 6119518208 REST API: Creating topic with data: {'name': 'test-topic'}
+WARNING 2025-09-19 05:37:53,765 views 70001 6119518208 REST API: Topic 'test-topic' already exists
+INFO 2025-09-19 05:37:53,775 state 70001 6119518208 Deleting topic 'test-topic' with 0 subscribers
+INFO 2025-09-19 05:37:53,775 state 70001 6119518208 Successfully deleted topic: test-topic
+WARNING 2025-09-19 05:37:53,780 state 70001 6119518208 Topic 'non-existent' not found for deletion
+INFO 2025-09-19 05:37:53,828 consumers 70001 8226964032 WebSocket client connected: c89dac1b-6a23-46ab-80ed-9f14b592ede8
+INFO 2025-09-19 05:37:53,832 consumers 70001 8226964032 Subscribing test-client-1 to topic 'test-topic' with last_n=0
+INFO 2025-09-19 05:37:53,833 consumers 70001 8226964032 Creating new topic: test-topic
+INFO 2025-09-19 05:37:53,833 state 70001 8226964032 Created topic: test-topic
+INFO 2025-09-19 05:37:53,833 consumers 70001 8226964032 Successfully subscribed test-client-1 to topic 'test-topic'
+INFO 2025-09-19 05:37:53,836 consumers 70001 8226964032 Publishing message 73d59d11-2ff6-4d7e-aad2-08752060b382 to topic 'test-topic' from c89dac1b-6a23-46ab-80ed-9f14b592ede8
+INFO 2025-09-19 05:37:53,836 consumers 70001 8226964032 Successfully published message 73d59d11-2ff6-4d7e-aad2-08752060b382 to topic 'test-topic'
+INFO 2025-09-19 05:37:55,840 consumers 70001 8226964032 WebSocket client disconnecting: c89dac1b-6a23-46ab-80ed-9f14b592ede8, close_code: 1000
+INFO 2025-09-19 05:37:55,840 consumers 70001 8226964032 WebSocket client disconnected: c89dac1b-6a23-46ab-80ed-9f14b592ede8
+INFO 2025-09-19 05:37:55,840 consumers 70001 8226964032 Message processor cancelled for c89dac1b-6a23-46ab-80ed-9f14b592ede8
+INFO 2025-09-19 05:37:55,843 consumers 70001 8226964032 WebSocket client connected: f3db737f-3b42-4db4-83bb-c7d993465b26
+INFO 2025-09-19 05:37:55,846 consumers 70001 8226964032 WebSocket client connected: aad33d78-a24c-441f-b270-3fab7a1e2aa4
+INFO 2025-09-19 05:37:55,846 consumers 70001 8226964032 Subscribing client-1 to topic 'multi-test' with last_n=0
+INFO 2025-09-19 05:37:55,846 consumers 70001 8226964032 Creating new topic: multi-test
+INFO 2025-09-19 05:37:55,846 state 70001 8226964032 Created topic: multi-test
+INFO 2025-09-19 05:37:55,846 consumers 70001 8226964032 Successfully subscribed client-1 to topic 'multi-test'
+INFO 2025-09-19 05:37:55,847 consumers 70001 8226964032 Subscribing client-2 to topic 'multi-test' with last_n=0
+INFO 2025-09-19 05:37:55,847 consumers 70001 8226964032 Successfully subscribed client-2 to topic 'multi-test'
+INFO 2025-09-19 05:37:55,847 consumers 70001 8226964032 Publishing message 00f067d5-7456-45fe-92cd-da82cedcad8f to topic 'multi-test' from f3db737f-3b42-4db4-83bb-c7d993465b26
+INFO 2025-09-19 05:37:55,847 consumers 70001 8226964032 Successfully published message 00f067d5-7456-45fe-92cd-da82cedcad8f to topic 'multi-test'
+INFO 2025-09-19 05:37:57,852 consumers 70001 8226964032 WebSocket client disconnecting: aad33d78-a24c-441f-b270-3fab7a1e2aa4, close_code: 1000
+INFO 2025-09-19 05:37:57,853 consumers 70001 8226964032 WebSocket client disconnected: aad33d78-a24c-441f-b270-3fab7a1e2aa4
+INFO 2025-09-19 05:37:57,853 consumers 70001 8226964032 Message processor cancelled for aad33d78-a24c-441f-b270-3fab7a1e2aa4
+INFO 2025-09-19 05:37:57,854 consumers 70001 8226964032 WebSocket client disconnecting: f3db737f-3b42-4db4-83bb-c7d993465b26, close_code: 1000
+INFO 2025-09-19 05:37:57,855 consumers 70001 8226964032 WebSocket client disconnected: f3db737f-3b42-4db4-83bb-c7d993465b26
+INFO 2025-09-19 05:37:57,855 consumers 70001 8226964032 Message processor cancelled for f3db737f-3b42-4db4-83bb-c7d993465b26
+INFO 2025-09-19 05:39:42,625 consumers 70494 8226964032 WebSocket client connected: 0661bf48-9045-41a5-ab4a-c5e56cd0d77f
+INFO 2025-09-19 05:39:42,626 consumers 70494 8226964032 WebSocket client disconnecting: 0661bf48-9045-41a5-ab4a-c5e56cd0d77f, close_code: 1000
+INFO 2025-09-19 05:39:42,626 consumers 70494 8226964032 WebSocket client disconnected: 0661bf48-9045-41a5-ab4a-c5e56cd0d77f
+INFO 2025-09-19 05:40:15,798 views 70494 6200455168 REST API: Creating topic with data: {'name': 'debug-topic'}
+INFO 2025-09-19 05:40:15,798 state 70494 6200455168 Created topic: debug-topic
+INFO 2025-09-19 05:40:15,798 views 70494 6200455168 REST API: Successfully created topic 'debug-topic'
+INFO 2025-09-19 05:40:15,814 consumers 70494 8226964032 WebSocket client connected: c4f01d59-d600-4c1f-90cf-b23132e4380f
+INFO 2025-09-19 05:40:15,816 consumers 70494 8226964032 Subscribing debug-client-1 to topic 'debug-topic' with last_n=0
+INFO 2025-09-19 05:40:15,816 consumers 70494 8226964032 Successfully subscribed debug-client-1 to topic 'debug-topic'
+INFO 2025-09-19 05:40:15,816 consumers 70494 8226964032 Publishing message 668b9ea9-7648-415e-a75b-9d88fca1a3c0 to topic 'debug-topic' from c4f01d59-d600-4c1f-90cf-b23132e4380f
+INFO 2025-09-19 05:40:15,816 consumers 70494 8226964032 Successfully published message 668b9ea9-7648-415e-a75b-9d88fca1a3c0 to topic 'debug-topic'
+INFO 2025-09-19 05:40:20,823 consumers 70494 8226964032 WebSocket client connected: 0dd71939-ecdd-41fb-9975-3d45ac0794bf
+INFO 2025-09-19 05:40:20,824 consumers 70494 8226964032 Subscribing debug-client-2 to topic 'debug-topic' with last_n=0
+INFO 2025-09-19 05:40:20,825 consumers 70494 8226964032 Successfully subscribed debug-client-2 to topic 'debug-topic'
+INFO 2025-09-19 05:40:20,826 consumers 70494 8226964032 Publishing message 8d3f6a74-b83d-4606-b5e3-dcd65cc3d1f1 to topic 'debug-topic' from c4f01d59-d600-4c1f-90cf-b23132e4380f
+INFO 2025-09-19 05:40:20,826 consumers 70494 8226964032 Successfully published message 8d3f6a74-b83d-4606-b5e3-dcd65cc3d1f1 to topic 'debug-topic'
+INFO 2025-09-19 05:40:24,832 consumers 70494 8226964032 WebSocket client disconnecting: 0dd71939-ecdd-41fb-9975-3d45ac0794bf, close_code: 1000
+INFO 2025-09-19 05:40:24,833 consumers 70494 8226964032 WebSocket client disconnected: 0dd71939-ecdd-41fb-9975-3d45ac0794bf
+INFO 2025-09-19 05:40:24,833 consumers 70494 8226964032 Message processor cancelled for 0dd71939-ecdd-41fb-9975-3d45ac0794bf
+INFO 2025-09-19 05:40:24,835 consumers 70494 8226964032 WebSocket client disconnecting: c4f01d59-d600-4c1f-90cf-b23132e4380f, close_code: 1000
+INFO 2025-09-19 05:40:24,835 consumers 70494 8226964032 WebSocket client disconnected: c4f01d59-d600-4c1f-90cf-b23132e4380f
+INFO 2025-09-19 05:40:24,835 consumers 70494 8226964032 Message processor cancelled for c4f01d59-d600-4c1f-90cf-b23132e4380f
+INFO 2025-09-19 05:43:34,542 views 70494 6200455168 REST API: Creating topic with data: {'name': 'debug-topic'}
+WARNING 2025-09-19 05:43:34,543 views 70494 6200455168 REST API: Topic 'debug-topic' already exists
+INFO 2025-09-19 05:43:34,573 consumers 70494 8226964032 WebSocket client connected: 1e784dc9-596b-4adb-b37b-e28c3606b7bc
+INFO 2025-09-19 05:43:34,574 consumers 70494 8226964032 Subscribing debug-client-1 to topic 'debug-topic' with last_n=0
+INFO 2025-09-19 05:43:34,574 consumers 70494 8226964032 Successfully subscribed debug-client-1 to topic 'debug-topic'
+INFO 2025-09-19 05:43:34,574 consumers 70494 8226964032 Publishing message 0392079f-38de-48fe-a3ff-64bee80ecb17 to topic 'debug-topic' from 1e784dc9-596b-4adb-b37b-e28c3606b7bc
+INFO 2025-09-19 05:43:34,574 consumers 70494 8226964032 Successfully published message 0392079f-38de-48fe-a3ff-64bee80ecb17 to topic 'debug-topic'
+INFO 2025-09-19 05:43:39,579 consumers 70494 8226964032 WebSocket client connected: b8be5ebb-a205-4258-b1bc-847c4281f344
+INFO 2025-09-19 05:43:39,580 consumers 70494 8226964032 Subscribing debug-client-2 to topic 'debug-topic' with last_n=0
+INFO 2025-09-19 05:43:39,580 consumers 70494 8226964032 Successfully subscribed debug-client-2 to topic 'debug-topic'
+INFO 2025-09-19 05:43:39,581 consumers 70494 8226964032 Publishing message 6a9a9654-e53c-42ba-adec-c2ed352eb127 to topic 'debug-topic' from 1e784dc9-596b-4adb-b37b-e28c3606b7bc
+INFO 2025-09-19 05:43:39,581 consumers 70494 8226964032 Successfully published message 6a9a9654-e53c-42ba-adec-c2ed352eb127 to topic 'debug-topic'
+INFO 2025-09-19 05:43:43,587 consumers 70494 8226964032 WebSocket client disconnecting: b8be5ebb-a205-4258-b1bc-847c4281f344, close_code: 1000
+INFO 2025-09-19 05:43:43,587 consumers 70494 8226964032 WebSocket client disconnected: b8be5ebb-a205-4258-b1bc-847c4281f344
+INFO 2025-09-19 05:43:43,587 consumers 70494 8226964032 Message processor cancelled for b8be5ebb-a205-4258-b1bc-847c4281f344
+INFO 2025-09-19 05:43:43,588 consumers 70494 8226964032 WebSocket client disconnecting: 1e784dc9-596b-4adb-b37b-e28c3606b7bc, close_code: 1000
+INFO 2025-09-19 05:43:43,588 consumers 70494 8226964032 WebSocket client disconnected: 1e784dc9-596b-4adb-b37b-e28c3606b7bc
+INFO 2025-09-19 05:43:43,589 consumers 70494 8226964032 Message processor cancelled for 1e784dc9-596b-4adb-b37b-e28c3606b7bc
+INFO 2025-09-19 05:43:46,553 views 70494 6200455168 REST API: Creating topic with data: {'name': 'debug-topic'}
+WARNING 2025-09-19 05:43:46,553 views 70494 6200455168 REST API: Topic 'debug-topic' already exists
+INFO 2025-09-19 05:43:46,638 consumers 70494 8226964032 WebSocket client connected: 2ce4c268-116e-495a-b03d-5d17f715f232
+INFO 2025-09-19 05:43:46,640 consumers 70494 8226964032 Subscribing debug-client-1 to topic 'debug-topic' with last_n=0
+INFO 2025-09-19 05:43:46,641 consumers 70494 8226964032 Successfully subscribed debug-client-1 to topic 'debug-topic'
+INFO 2025-09-19 05:43:46,641 consumers 70494 8226964032 Publishing message 620fdbc0-ce71-4c41-98f6-65949edcc8bc to topic 'debug-topic' from 2ce4c268-116e-495a-b03d-5d17f715f232
+INFO 2025-09-19 05:43:46,641 consumers 70494 8226964032 Successfully published message 620fdbc0-ce71-4c41-98f6-65949edcc8bc to topic 'debug-topic'
+INFO 2025-09-19 05:43:51,649 consumers 70494 8226964032 WebSocket client connected: 7776c653-94a5-4a0a-832b-4ba93b13faa4
+INFO 2025-09-19 05:43:51,650 consumers 70494 8226964032 Subscribing debug-client-2 to topic 'debug-topic' with last_n=0
+INFO 2025-09-19 05:43:51,650 consumers 70494 8226964032 Successfully subscribed debug-client-2 to topic 'debug-topic'
+INFO 2025-09-19 05:43:51,652 consumers 70494 8226964032 Publishing message f0182768-d660-4878-bd5e-1c6385a7f7f7 to topic 'debug-topic' from 2ce4c268-116e-495a-b03d-5d17f715f232
+INFO 2025-09-19 05:43:51,652 consumers 70494 8226964032 Successfully published message f0182768-d660-4878-bd5e-1c6385a7f7f7 to topic 'debug-topic'
+INFO 2025-09-19 05:43:55,656 consumers 70494 8226964032 WebSocket client disconnecting: 7776c653-94a5-4a0a-832b-4ba93b13faa4, close_code: 1000
+INFO 2025-09-19 05:43:55,656 consumers 70494 8226964032 WebSocket client disconnected: 7776c653-94a5-4a0a-832b-4ba93b13faa4
+INFO 2025-09-19 05:43:55,656 consumers 70494 8226964032 Message processor cancelled for 7776c653-94a5-4a0a-832b-4ba93b13faa4
+INFO 2025-09-19 05:43:55,656 consumers 70494 8226964032 WebSocket client disconnecting: 2ce4c268-116e-495a-b03d-5d17f715f232, close_code: 1000
+INFO 2025-09-19 05:43:55,656 consumers 70494 8226964032 WebSocket client disconnected: 2ce4c268-116e-495a-b03d-5d17f715f232
+INFO 2025-09-19 05:43:55,656 consumers 70494 8226964032 Message processor cancelled for 2ce4c268-116e-495a-b03d-5d17f715f232
+INFO 2025-09-19 05:44:42,895 views 72806 6152646656 REST API: Creating topic with data: {'name': 'debug-topic'}
+INFO 2025-09-19 05:44:42,895 state 72806 6152646656 Created topic: debug-topic
+INFO 2025-09-19 05:44:42,895 views 72806 6152646656 REST API: Successfully created topic 'debug-topic'
+INFO 2025-09-19 05:44:42,922 consumers 72806 8226964032 WebSocket client connected: d2c20427-8239-4b81-b215-2b2d2baa2e87
+INFO 2025-09-19 05:44:42,924 consumers 72806 8226964032 Subscribing debug-client-1 to topic 'debug-topic' with last_n=0
+INFO 2025-09-19 05:44:42,924 consumers 72806 8226964032 Successfully subscribed debug-client-1 to topic 'debug-topic'
+INFO 2025-09-19 05:44:42,924 consumers 72806 8226964032 Publishing message a2547e1e-3c3d-4496-89ff-1c3c5f7a4cfd to topic 'debug-topic' from d2c20427-8239-4b81-b215-2b2d2baa2e87
+INFO 2025-09-19 05:44:42,924 consumers 72806 8226964032 Successfully published message a2547e1e-3c3d-4496-89ff-1c3c5f7a4cfd to topic 'debug-topic'
+INFO 2025-09-19 05:44:47,935 consumers 72806 8226964032 WebSocket client connected: 94e9d8ca-d66d-4678-a957-0668a9cfc914
+INFO 2025-09-19 05:44:47,936 consumers 72806 8226964032 Subscribing debug-client-2 to topic 'debug-topic' with last_n=0
+INFO 2025-09-19 05:44:47,936 consumers 72806 8226964032 Successfully subscribed debug-client-2 to topic 'debug-topic'
+INFO 2025-09-19 05:44:47,938 consumers 72806 8226964032 Publishing message 0b432cbc-edf4-4e48-9107-85f7beb37bc6 to topic 'debug-topic' from d2c20427-8239-4b81-b215-2b2d2baa2e87
+INFO 2025-09-19 05:44:47,938 consumers 72806 8226964032 Successfully published message 0b432cbc-edf4-4e48-9107-85f7beb37bc6 to topic 'debug-topic'
+INFO 2025-09-19 05:44:51,943 consumers 72806 8226964032 WebSocket client disconnecting: 94e9d8ca-d66d-4678-a957-0668a9cfc914, close_code: 1000
+INFO 2025-09-19 05:44:51,943 consumers 72806 8226964032 WebSocket client disconnected: 94e9d8ca-d66d-4678-a957-0668a9cfc914
+INFO 2025-09-19 05:44:51,943 consumers 72806 8226964032 Message processor cancelled for 94e9d8ca-d66d-4678-a957-0668a9cfc914
+INFO 2025-09-19 05:44:51,943 consumers 72806 8226964032 WebSocket client disconnecting: d2c20427-8239-4b81-b215-2b2d2baa2e87, close_code: 1000
+INFO 2025-09-19 05:44:51,943 consumers 72806 8226964032 WebSocket client disconnected: d2c20427-8239-4b81-b215-2b2d2baa2e87
+INFO 2025-09-19 05:44:51,944 consumers 72806 8226964032 Message processor cancelled for d2c20427-8239-4b81-b215-2b2d2baa2e87
+INFO 2025-09-19 05:45:36,899 views 72806 6169473024 REST API: Creating topic with data: {'name': 'debug-topic'}
+WARNING 2025-09-19 05:45:36,900 views 72806 6169473024 REST API: Topic 'debug-topic' already exists
+INFO 2025-09-19 05:45:36,929 consumers 72806 8226964032 WebSocket client connected: 0f352731-5636-4548-a582-c561ce4fd21b
+INFO 2025-09-19 05:45:36,930 consumers 72806 8226964032 Subscribing debug-client-1 to topic 'debug-topic' with last_n=0
+INFO 2025-09-19 05:45:36,930 consumers 72806 8226964032 Successfully subscribed debug-client-1 to topic 'debug-topic'
+INFO 2025-09-19 05:45:36,931 consumers 72806 8226964032 Publishing message e72554e7-32bb-41ca-9753-c0a756d2762a to topic 'debug-topic' from 0f352731-5636-4548-a582-c561ce4fd21b
+INFO 2025-09-19 05:45:36,931 consumers 72806 8226964032 Successfully published message e72554e7-32bb-41ca-9753-c0a756d2762a to topic 'debug-topic'
+INFO 2025-09-19 05:45:41,936 consumers 72806 8226964032 WebSocket client connected: 70b7b7f3-260c-48bd-85d8-0a9b2861d4dc
+INFO 2025-09-19 05:45:41,937 consumers 72806 8226964032 Subscribing debug-client-2 to topic 'debug-topic' with last_n=0
+INFO 2025-09-19 05:45:41,937 consumers 72806 8226964032 Successfully subscribed debug-client-2 to topic 'debug-topic'
+INFO 2025-09-19 05:45:41,938 consumers 72806 8226964032 Publishing message e620328a-0c97-4d21-97c0-61024129af7e to topic 'debug-topic' from 0f352731-5636-4548-a582-c561ce4fd21b
+INFO 2025-09-19 05:45:41,938 consumers 72806 8226964032 Successfully published message e620328a-0c97-4d21-97c0-61024129af7e to topic 'debug-topic'
+INFO 2025-09-19 05:45:45,942 consumers 72806 8226964032 WebSocket client disconnecting: 70b7b7f3-260c-48bd-85d8-0a9b2861d4dc, close_code: 1000
+INFO 2025-09-19 05:45:45,942 consumers 72806 8226964032 WebSocket client disconnected: 70b7b7f3-260c-48bd-85d8-0a9b2861d4dc
+INFO 2025-09-19 05:45:45,942 consumers 72806 8226964032 Message processor cancelled for 70b7b7f3-260c-48bd-85d8-0a9b2861d4dc
+INFO 2025-09-19 05:45:45,943 consumers 72806 8226964032 WebSocket client disconnecting: 0f352731-5636-4548-a582-c561ce4fd21b, close_code: 1000
+INFO 2025-09-19 05:45:45,944 consumers 72806 8226964032 WebSocket client disconnected: 0f352731-5636-4548-a582-c561ce4fd21b
+INFO 2025-09-19 05:45:45,944 consumers 72806 8226964032 Message processor cancelled for 0f352731-5636-4548-a582-c561ce4fd21b
+INFO 2025-09-19 05:47:40,198 views 72806 6169473024 REST API: Creating topic with data: {'name': 'simple-test'}
+INFO 2025-09-19 05:47:40,199 state 72806 6169473024 Created topic: simple-test
+INFO 2025-09-19 05:47:40,199 views 72806 6169473024 REST API: Successfully created topic 'simple-test'
+INFO 2025-09-19 05:47:40,232 consumers 72806 8226964032 WebSocket client connected: 89d9f0a7-ca95-4e1c-8e78-d2ff4cc473be
+INFO 2025-09-19 05:47:40,232 consumers 72806 8226964032 Subscribing test-client to topic 'simple-test' with last_n=0
+INFO 2025-09-19 05:47:40,232 consumers 72806 8226964032 Successfully subscribed test-client to topic 'simple-test'
+WARNING 2025-09-19 05:47:40,233 consumers 72806 8226964032 Publish failed - invalid UUID from 89d9f0a7-ca95-4e1c-8e78-d2ff4cc473be: test-msg-1
+INFO 2025-09-19 05:47:43,237 consumers 72806 8226964032 WebSocket client disconnecting: 89d9f0a7-ca95-4e1c-8e78-d2ff4cc473be, close_code: 1000
+INFO 2025-09-19 05:47:43,237 consumers 72806 8226964032 WebSocket client disconnected: 89d9f0a7-ca95-4e1c-8e78-d2ff4cc473be
+INFO 2025-09-19 05:47:43,237 consumers 72806 8226964032 Message processor cancelled for 89d9f0a7-ca95-4e1c-8e78-d2ff4cc473be
+INFO 2025-09-19 05:48:04,910 views 72806 6169473024 REST API: Creating topic with data: {'name': 'simple-test'}
+WARNING 2025-09-19 05:48:04,911 views 72806 6169473024 REST API: Topic 'simple-test' already exists
+INFO 2025-09-19 05:48:04,931 consumers 72806 8226964032 WebSocket client connected: f209bb20-aa19-42c4-907c-e0463b2c6e15
+INFO 2025-09-19 05:48:04,932 consumers 72806 8226964032 Subscribing test-client to topic 'simple-test' with last_n=0
+INFO 2025-09-19 05:48:04,932 consumers 72806 8226964032 Successfully subscribed test-client to topic 'simple-test'
+INFO 2025-09-19 05:48:04,932 consumers 72806 8226964032 Publishing message 84dae45e-00cb-4a87-ba17-81d4136d00f0 to topic 'simple-test' from f209bb20-aa19-42c4-907c-e0463b2c6e15
+INFO 2025-09-19 05:48:04,932 consumers 72806 8226964032 Successfully published message 84dae45e-00cb-4a87-ba17-81d4136d00f0 to topic 'simple-test'
+INFO 2025-09-19 05:48:07,936 consumers 72806 8226964032 WebSocket client disconnecting: f209bb20-aa19-42c4-907c-e0463b2c6e15, close_code: 1000
+INFO 2025-09-19 05:48:07,936 consumers 72806 8226964032 WebSocket client disconnected: f209bb20-aa19-42c4-907c-e0463b2c6e15
+INFO 2025-09-19 05:48:07,936 consumers 72806 8226964032 Message processor cancelled for f209bb20-aa19-42c4-907c-e0463b2c6e15
+INFO 2025-09-19 05:48:29,161 views 72806 6169473024 REST API: Creating topic with data: {'name': 'simple-test'}
+WARNING 2025-09-19 05:48:29,161 views 72806 6169473024 REST API: Topic 'simple-test' already exists
+INFO 2025-09-19 05:48:29,190 consumers 72806 8226964032 WebSocket client connected: 2ea70e0a-2285-4850-bd09-22227177ae90
+INFO 2025-09-19 05:48:29,191 consumers 72806 8226964032 Subscribing test-client to topic 'simple-test' with last_n=0
+INFO 2025-09-19 05:48:29,191 consumers 72806 8226964032 Successfully subscribed test-client to topic 'simple-test'
+INFO 2025-09-19 05:48:29,192 consumers 72806 8226964032 Publishing message 56644942-e4e6-4deb-ab6d-c5943c9d33c9 to topic 'simple-test' from 2ea70e0a-2285-4850-bd09-22227177ae90
+INFO 2025-09-19 05:48:29,192 consumers 72806 8226964032 Successfully published message 56644942-e4e6-4deb-ab6d-c5943c9d33c9 to topic 'simple-test'
+INFO 2025-09-19 05:48:32,196 consumers 72806 8226964032 WebSocket client disconnecting: 2ea70e0a-2285-4850-bd09-22227177ae90, close_code: 1000
+INFO 2025-09-19 05:48:32,196 consumers 72806 8226964032 WebSocket client disconnected: 2ea70e0a-2285-4850-bd09-22227177ae90
+INFO 2025-09-19 05:48:32,196 consumers 72806 8226964032 Message processor cancelled for 2ea70e0a-2285-4850-bd09-22227177ae90
+INFO 2025-09-19 05:49:27,131 views 72806 6169473024 REST API: Creating topic with data: {'name': 'simple-test'}
+WARNING 2025-09-19 05:49:27,132 views 72806 6169473024 REST API: Topic 'simple-test' already exists
+INFO 2025-09-19 05:49:27,153 consumers 72806 8226964032 WebSocket client connected: cc718402-bc30-482e-8b1d-da6eee5fe4e2
+INFO 2025-09-19 05:49:27,153 consumers 72806 8226964032 Subscribing test-client to topic 'simple-test' with last_n=0
+INFO 2025-09-19 05:49:27,153 consumers 72806 8226964032 Successfully subscribed test-client to topic 'simple-test'
+INFO 2025-09-19 05:49:27,154 consumers 72806 8226964032 Publishing message 5864a16d-5944-4691-8e1f-b235aadcb0a5 to topic 'simple-test' from cc718402-bc30-482e-8b1d-da6eee5fe4e2
+INFO 2025-09-19 05:49:27,154 consumers 72806 8226964032 Successfully published message 5864a16d-5944-4691-8e1f-b235aadcb0a5 to topic 'simple-test'
+INFO 2025-09-19 05:49:30,157 consumers 72806 8226964032 WebSocket client disconnecting: cc718402-bc30-482e-8b1d-da6eee5fe4e2, close_code: 1000
+INFO 2025-09-19 05:49:30,158 consumers 72806 8226964032 WebSocket client disconnected: cc718402-bc30-482e-8b1d-da6eee5fe4e2
+INFO 2025-09-19 05:49:30,159 consumers 72806 8226964032 Message processor cancelled for cc718402-bc30-482e-8b1d-da6eee5fe4e2
+INFO 2025-09-19 05:50:35,646 views 72806 6169473024 REST API: Creating topic with data: {'name': 'simple-test'}
+WARNING 2025-09-19 05:50:35,647 views 72806 6169473024 REST API: Topic 'simple-test' already exists
+INFO 2025-09-19 05:50:35,669 consumers 72806 8226964032 WebSocket client connected: 4640b424-976f-45bc-a5c2-3f553c744155
+INFO 2025-09-19 05:50:35,670 consumers 72806 8226964032 Subscribing test-client to topic 'simple-test' with last_n=0
+INFO 2025-09-19 05:50:35,670 consumers 72806 8226964032 Successfully subscribed test-client to topic 'simple-test'
+INFO 2025-09-19 05:50:35,671 consumers 72806 8226964032 Publishing message 4d7d55a7-2294-4956-89e0-578ba54a5b52 to topic 'simple-test' from 4640b424-976f-45bc-a5c2-3f553c744155
+INFO 2025-09-19 05:50:35,671 consumers 72806 8226964032 Successfully published message 4d7d55a7-2294-4956-89e0-578ba54a5b52 to topic 'simple-test'
+INFO 2025-09-19 05:50:38,673 consumers 72806 8226964032 WebSocket client disconnecting: 4640b424-976f-45bc-a5c2-3f553c744155, close_code: 1000
+INFO 2025-09-19 05:50:38,674 consumers 72806 8226964032 WebSocket client disconnected: 4640b424-976f-45bc-a5c2-3f553c744155
+INFO 2025-09-19 05:50:38,674 consumers 72806 8226964032 Message processor cancelled for 4640b424-976f-45bc-a5c2-3f553c744155
+INFO 2025-09-19 05:51:27,392 consumers 72806 8226964032 WebSocket client connected: b2eced01-808e-4941-896c-a489d10ba51a
+INFO 2025-09-19 05:51:27,394 consumers 72806 8226964032 Subscribing browser-client to topic 'manual-test' with last_n=0
+INFO 2025-09-19 05:51:27,394 consumers 72806 8226964032 Creating new topic: manual-test
+INFO 2025-09-19 05:51:27,394 state 72806 8226964032 Created topic: manual-test
+INFO 2025-09-19 05:51:27,394 consumers 72806 8226964032 Successfully subscribed browser-client to topic 'manual-test'
+INFO 2025-09-19 05:51:30,392 consumers 72806 8226964032 Publishing message 12345678-1234-1234-1234-123456789012 to topic 'manual-test' from b2eced01-808e-4941-896c-a489d10ba51a
+INFO 2025-09-19 05:51:30,395 consumers 72806 8226964032 Successfully published message 12345678-1234-1234-1234-123456789012 to topic 'manual-test'
+INFO 2025-09-19 05:53:18,831 consumers 72806 8226964032 WebSocket client connected: c69a6888-98ab-4233-888b-d6290a1de1df
+INFO 2025-09-19 05:53:18,833 consumers 72806 8226964032 Subscribing browser-client to topic 'manual-test' with last_n=0
+INFO 2025-09-19 05:53:18,833 consumers 72806 8226964032 Successfully subscribed browser-client to topic 'manual-test'
+INFO 2025-09-19 05:53:20,838 consumers 72806 8226964032 Publishing message 12345678-1234-1234-1234-123456789012 to topic 'manual-test' from c69a6888-98ab-4233-888b-d6290a1de1df
+INFO 2025-09-19 05:53:20,839 consumers 72806 8226964032 Successfully published message 12345678-1234-1234-1234-123456789012 to topic 'manual-test'
+INFO 2025-09-19 05:53:22,843 consumers 72806 8226964032 Publishing message 12345678-1234-1234-1234-123456789012 to topic 'manual-test' from c69a6888-98ab-4233-888b-d6290a1de1df
+INFO 2025-09-19 05:53:22,844 consumers 72806 8226964032 Successfully published message 12345678-1234-1234-1234-123456789012 to topic 'manual-test'
+INFO 2025-09-19 05:53:24,848 consumers 72806 8226964032 Publishing message 12345678-1234-1234-1234-123456789012 to topic 'manual-test' from c69a6888-98ab-4233-888b-d6290a1de1df
+INFO 2025-09-19 05:53:24,848 consumers 72806 8226964032 Successfully published message 12345678-1234-1234-1234-123456789012 to topic 'manual-test'
+INFO 2025-09-19 05:53:26,852 consumers 72806 8226964032 Publishing message 12345678-1234-1234-1234-123456789012 to topic 'manual-test' from c69a6888-98ab-4233-888b-d6290a1de1df
+INFO 2025-09-19 05:53:26,853 consumers 72806 8226964032 Successfully published message 12345678-1234-1234-1234-123456789012 to topic 'manual-test'
+INFO 2025-09-19 05:53:28,857 consumers 72806 8226964032 Publishing message 12345678-1234-1234-1234-123456789012 to topic 'manual-test' from c69a6888-98ab-4233-888b-d6290a1de1df
+INFO 2025-09-19 05:53:28,858 consumers 72806 8226964032 Successfully published message 12345678-1234-1234-1234-123456789012 to topic 'manual-test'
+INFO 2025-09-19 05:53:30,865 consumers 72806 8226964032 Publishing message 12345678-1234-1234-1234-123456789012 to topic 'manual-test' from c69a6888-98ab-4233-888b-d6290a1de1df
+INFO 2025-09-19 05:53:30,866 consumers 72806 8226964032 Successfully published message 12345678-1234-1234-1234-123456789012 to topic 'manual-test'
+INFO 2025-09-19 05:53:32,874 consumers 72806 8226964032 Publishing message 12345678-1234-1234-1234-123456789012 to topic 'manual-test' from c69a6888-98ab-4233-888b-d6290a1de1df
+INFO 2025-09-19 05:53:32,876 consumers 72806 8226964032 Successfully published message 12345678-1234-1234-1234-123456789012 to topic 'manual-test'
+INFO 2025-09-19 05:53:34,879 consumers 72806 8226964032 Publishing message 12345678-1234-1234-1234-123456789012 to topic 'manual-test' from c69a6888-98ab-4233-888b-d6290a1de1df
+INFO 2025-09-19 05:53:34,879 consumers 72806 8226964032 Successfully published message 12345678-1234-1234-1234-123456789012 to topic 'manual-test'
+INFO 2025-09-19 05:53:36,883 consumers 72806 8226964032 Publishing message 12345678-1234-1234-1234-123456789012 to topic 'manual-test' from c69a6888-98ab-4233-888b-d6290a1de1df
+INFO 2025-09-19 05:53:36,883 consumers 72806 8226964032 Successfully published message 12345678-1234-1234-1234-123456789012 to topic 'manual-test'
+INFO 2025-09-19 05:53:38,887 consumers 72806 8226964032 Publishing message 12345678-1234-1234-1234-123456789012 to topic 'manual-test' from c69a6888-98ab-4233-888b-d6290a1de1df
+INFO 2025-09-19 05:53:38,888 consumers 72806 8226964032 Successfully published message 12345678-1234-1234-1234-123456789012 to topic 'manual-test'
+INFO 2025-09-19 05:53:40,895 consumers 72806 8226964032 Publishing message 12345678-1234-1234-1234-123456789012 to topic 'manual-test' from c69a6888-98ab-4233-888b-d6290a1de1df
+INFO 2025-09-19 05:53:40,895 consumers 72806 8226964032 Successfully published message 12345678-1234-1234-1234-123456789012 to topic 'manual-test'
+INFO 2025-09-19 05:53:43,012 consumers 72806 8226964032 Publishing message 12345678-1234-1234-1234-123456789012 to topic 'manual-test' from c69a6888-98ab-4233-888b-d6290a1de1df
+INFO 2025-09-19 05:53:43,013 consumers 72806 8226964032 Successfully published message 12345678-1234-1234-1234-123456789012 to topic 'manual-test'
+INFO 2025-09-19 05:53:46,013 consumers 72806 8226964032 Publishing message 12345678-1234-1234-1234-123456789012 to topic 'manual-test' from c69a6888-98ab-4233-888b-d6290a1de1df
+INFO 2025-09-19 05:53:46,013 consumers 72806 8226964032 Successfully published message 12345678-1234-1234-1234-123456789012 to topic 'manual-test'
+INFO 2025-09-19 05:53:49,013 consumers 72806 8226964032 Publishing message 12345678-1234-1234-1234-123456789012 to topic 'manual-test' from c69a6888-98ab-4233-888b-d6290a1de1df
+INFO 2025-09-19 05:53:49,014 consumers 72806 8226964032 Successfully published message 12345678-1234-1234-1234-123456789012 to topic 'manual-test'
+INFO 2025-09-19 05:53:52,010 consumers 72806 8226964032 Publishing message 12345678-1234-1234-1234-123456789012 to topic 'manual-test' from c69a6888-98ab-4233-888b-d6290a1de1df
+INFO 2025-09-19 05:53:52,010 consumers 72806 8226964032 Successfully published message 12345678-1234-1234-1234-123456789012 to topic 'manual-test'
+INFO 2025-09-19 05:53:52,671 consumers 72806 8226964032 WebSocket client disconnecting: c69a6888-98ab-4233-888b-d6290a1de1df, close_code: 1006
+INFO 2025-09-19 05:53:52,671 consumers 72806 8226964032 WebSocket client disconnected: c69a6888-98ab-4233-888b-d6290a1de1df
+INFO 2025-09-19 05:53:52,671 consumers 72806 8226964032 Message processor cancelled for c69a6888-98ab-4233-888b-d6290a1de1df
+INFO 2025-09-19 05:53:52,671 consumers 72806 8226964032 WebSocket client disconnecting: b2eced01-808e-4941-896c-a489d10ba51a, close_code: 1006
+INFO 2025-09-19 05:53:52,671 consumers 72806 8226964032 WebSocket client disconnected: b2eced01-808e-4941-896c-a489d10ba51a
+INFO 2025-09-19 05:53:52,672 consumers 72806 8226964032 Message processor cancelled for b2eced01-808e-4941-896c-a489d10ba51a
+INFO 2025-09-19 05:57:50,175 consumers 72806 8226964032 WebSocket client connected: 849b2788-b860-4963-8cfe-cfc77c17d7db
+INFO 2025-09-19 05:57:50,176 consumers 72806 8226964032 Subscribing minimal-client to topic 'manual-test' with last_n=0
+INFO 2025-09-19 05:57:50,176 consumers 72806 8226964032 Successfully subscribed minimal-client to topic 'manual-test'
+INFO 2025-09-19 05:57:50,177 consumers 72806 8226964032 Publishing message caae8abd-c0fa-403b-acb1-51b47734ca09 to topic 'manual-test' from 849b2788-b860-4963-8cfe-cfc77c17d7db
+INFO 2025-09-19 05:57:50,177 consumers 72806 8226964032 Successfully published message caae8abd-c0fa-403b-acb1-51b47734ca09 to topic 'manual-test'
+INFO 2025-09-19 05:57:55,179 consumers 72806 8226964032 WebSocket client disconnecting: 849b2788-b860-4963-8cfe-cfc77c17d7db, close_code: 1000
+INFO 2025-09-19 05:57:55,179 consumers 72806 8226964032 WebSocket client disconnected: 849b2788-b860-4963-8cfe-cfc77c17d7db
+INFO 2025-09-19 05:57:55,179 consumers 72806 8226964032 Message processor cancelled for 849b2788-b860-4963-8cfe-cfc77c17d7db
+INFO 2025-09-19 05:58:38,378 consumers 75047 8226964032 WebSocket client connected: 6e6f335e-dfe0-48d0-a99f-4a565f1b4860
+INFO 2025-09-19 05:58:38,379 consumers 75047 8226964032 🔍 SUBSCRIBE START: minimal-client to topic 'manual-test' with last_n=0
+INFO 2025-09-19 05:58:38,379 consumers 75047 8226964032 Subscribing minimal-client to topic 'manual-test' with last_n=0
+INFO 2025-09-19 05:58:38,379 consumers 75047 8226964032 Creating new topic: manual-test
+INFO 2025-09-19 05:58:38,379 state 75047 8226964032 Created topic: manual-test
+INFO 2025-09-19 05:58:38,379 consumers 75047 8226964032 Successfully subscribed minimal-client to topic 'manual-test'
+INFO 2025-09-19 05:58:38,379 consumers 75047 8226964032 🔍 About to check message processor for minimal-client
+INFO 2025-09-19 05:58:38,379 consumers 75047 8226964032 Message processor task status for 6e6f335e-dfe0-48d0-a99f-4a565f1b4860: None
+INFO 2025-09-19 05:58:38,379 consumers 75047 8226964032 Starting message processor for client 6e6f335e-dfe0-48d0-a99f-4a565f1b4860
+INFO 2025-09-19 05:58:38,380 consumers 75047 8226964032 Retrieved topic object for 'manual-test': True
+INFO 2025-09-19 05:58:38,380 consumers 75047 8226964032 Publishing message 195401b9-18e6-4f8d-bec0-c9f6122840c6 to topic 'manual-test' from 6e6f335e-dfe0-48d0-a99f-4a565f1b4860
+INFO 2025-09-19 05:58:38,380 consumers 75047 8226964032 Topic has 1 subscribers
+INFO 2025-09-19 05:58:38,380 consumers 75047 8226964032 Successfully published message 195401b9-18e6-4f8d-bec0-c9f6122840c6 to topic 'manual-test'
+INFO 2025-09-19 05:58:43,387 consumers 75047 8226964032 WebSocket client disconnecting: 6e6f335e-dfe0-48d0-a99f-4a565f1b4860, close_code: 1000
+INFO 2025-09-19 05:58:43,388 consumers 75047 8226964032 WebSocket client disconnected: 6e6f335e-dfe0-48d0-a99f-4a565f1b4860
+INFO 2025-09-19 05:58:43,388 consumers 75047 8226964032 Message processor cancelled for 6e6f335e-dfe0-48d0-a99f-4a565f1b4860
+INFO 2025-09-19 06:00:06,900 consumers 75047 8226964032 WebSocket client connected: 55f2eb46-2c10-403a-bfc4-c72a7b32665e
+INFO 2025-09-19 06:00:06,901 consumers 75047 8226964032 🔍 SUBSCRIBE START: minimal-client to topic 'manual-test' with last_n=0
+INFO 2025-09-19 06:00:06,901 consumers 75047 8226964032 Subscribing minimal-client to topic 'manual-test' with last_n=0
+INFO 2025-09-19 06:00:06,901 consumers 75047 8226964032 Successfully subscribed minimal-client to topic 'manual-test'
+INFO 2025-09-19 06:00:06,901 consumers 75047 8226964032 🔍 About to check message processor for minimal-client
+INFO 2025-09-19 06:00:06,901 consumers 75047 8226964032 Message processor task status for 55f2eb46-2c10-403a-bfc4-c72a7b32665e: None
+INFO 2025-09-19 06:00:06,901 consumers 75047 8226964032 Starting message processor for client 55f2eb46-2c10-403a-bfc4-c72a7b32665e
+INFO 2025-09-19 06:00:06,902 consumers 75047 8226964032 Retrieved topic object for 'manual-test': True
+INFO 2025-09-19 06:00:06,902 consumers 75047 8226964032 Publishing message 88d72d0f-30ec-4a27-85e8-ae76dadfc6cd to topic 'manual-test' from 55f2eb46-2c10-403a-bfc4-c72a7b32665e
+INFO 2025-09-19 06:00:06,902 consumers 75047 8226964032 Topic has 2 subscribers
+INFO 2025-09-19 06:00:06,902 consumers 75047 8226964032 Successfully published message 88d72d0f-30ec-4a27-85e8-ae76dadfc6cd to topic 'manual-test'
+INFO 2025-09-19 06:00:11,904 consumers 75047 8226964032 WebSocket client disconnecting: 55f2eb46-2c10-403a-bfc4-c72a7b32665e, close_code: 1000
+INFO 2025-09-19 06:00:11,905 consumers 75047 8226964032 WebSocket client disconnected: 55f2eb46-2c10-403a-bfc4-c72a7b32665e
+INFO 2025-09-19 06:00:11,905 consumers 75047 8226964032 Message processor cancelled for 55f2eb46-2c10-403a-bfc4-c72a7b32665e
+INFO 2025-09-19 06:02:25,593 consumers 76103 8226964032 WebSocket client connected: c55c4cfb-0b0a-49ba-8d54-fcd69050bbe8
+INFO 2025-09-19 06:02:25,593 consumers 76103 8226964032 Subscribing s1 to topic 'orders' with last_n=5
+INFO 2025-09-19 06:02:25,593 consumers 76103 8226964032 Creating new topic: orders
+INFO 2025-09-19 06:02:25,593 state 76103 8226964032 Created topic: orders
+INFO 2025-09-19 06:02:25,593 consumers 76103 8226964032 Successfully subscribed s1 to topic 'orders'
+INFO 2025-09-19 06:02:25,593 consumers 76103 8226964032 Sending 0 historical messages to s1
+INFO 2025-09-19 06:02:25,594 consumers 76103 8226964032 Publishing message 550e8400-e29b-41d4-a716-446655440000 to topic 'orders' from c55c4cfb-0b0a-49ba-8d54-fcd69050bbe8
+INFO 2025-09-19 06:02:25,594 consumers 76103 8226964032 Successfully published message 550e8400-e29b-41d4-a716-446655440000 to topic 'orders'
+INFO 2025-09-19 06:02:27,597 consumers 76103 8226964032 Unsubscribed c55c4cfb-0b0a-49ba-8d54-fcd69050bbe8 from topic 'orders'
+INFO 2025-09-19 06:02:27,600 consumers 76103 8226964032 WebSocket client disconnecting: c55c4cfb-0b0a-49ba-8d54-fcd69050bbe8, close_code: 1000
+INFO 2025-09-19 06:02:27,600 consumers 76103 8226964032 WebSocket client disconnected: c55c4cfb-0b0a-49ba-8d54-fcd69050bbe8
+INFO 2025-09-19 06:02:27,600 consumers 76103 8226964032 Message processor cancelled for c55c4cfb-0b0a-49ba-8d54-fcd69050bbe8
+INFO 2025-09-19 06:02:27,606 consumers 76103 8226964032 WebSocket client connected: d2887057-fe8c-4ae5-ba7e-1bead43ed6af
+WARNING 2025-09-19 06:02:27,607 consumers 76103 8226964032 Subscribe failed - missing fields from d2887057-fe8c-4ae5-ba7e-1bead43ed6af: topic=None, client_id=None
+INFO 2025-09-19 06:02:27,609 consumers 76103 8226964032 WebSocket client disconnecting: d2887057-fe8c-4ae5-ba7e-1bead43ed6af, close_code: 1000
+INFO 2025-09-19 06:02:27,609 consumers 76103 8226964032 WebSocket client disconnected: d2887057-fe8c-4ae5-ba7e-1bead43ed6af
+INFO 2025-09-19 06:02:32,172 views 76103 6194655232 REST API: Creating topic with data: {'name': 'test-topic'}
+INFO 2025-09-19 06:02:32,173 state 76103 6194655232 Created topic: test-topic
+INFO 2025-09-19 06:02:32,173 views 76103 6194655232 REST API: Successfully created topic 'test-topic'
+INFO 2025-09-19 06:02:32,178 views 76103 6194655232 REST API: Creating topic with data: {'name': 'test-topic'}
+WARNING 2025-09-19 06:02:32,178 views 76103 6194655232 REST API: Topic 'test-topic' already exists
+INFO 2025-09-19 06:02:32,190 state 76103 6194655232 Deleting topic 'test-topic' with 0 subscribers
+INFO 2025-09-19 06:02:32,191 state 76103 6194655232 Successfully deleted topic: test-topic
+WARNING 2025-09-19 06:02:32,195 state 76103 6194655232 Topic 'non-existent' not found for deletion
+INFO 2025-09-19 06:02:32,217 consumers 76103 8226964032 WebSocket client connected: 5cbf5af8-3e5d-479a-bd9d-ea8c61879f1b
+INFO 2025-09-19 06:02:32,218 consumers 76103 8226964032 Subscribing test-client-1 to topic 'test-topic' with last_n=0
+INFO 2025-09-19 06:02:32,218 consumers 76103 8226964032 Creating new topic: test-topic
+INFO 2025-09-19 06:02:32,218 state 76103 8226964032 Created topic: test-topic
+INFO 2025-09-19 06:02:32,218 consumers 76103 8226964032 Successfully subscribed test-client-1 to topic 'test-topic'
+INFO 2025-09-19 06:02:32,219 consumers 76103 8226964032 Publishing message 4cef110e-11e1-47e7-8f48-690bf79cb391 to topic 'test-topic' from 5cbf5af8-3e5d-479a-bd9d-ea8c61879f1b
+INFO 2025-09-19 06:02:32,219 consumers 76103 8226964032 Successfully published message 4cef110e-11e1-47e7-8f48-690bf79cb391 to topic 'test-topic'
+INFO 2025-09-19 06:02:34,221 consumers 76103 8226964032 Unsubscribed 5cbf5af8-3e5d-479a-bd9d-ea8c61879f1b from topic 'test-topic'
+INFO 2025-09-19 06:02:34,223 consumers 76103 8226964032 WebSocket client disconnecting: 5cbf5af8-3e5d-479a-bd9d-ea8c61879f1b, close_code: 1000
+INFO 2025-09-19 06:02:34,223 consumers 76103 8226964032 WebSocket client disconnected: 5cbf5af8-3e5d-479a-bd9d-ea8c61879f1b
+INFO 2025-09-19 06:02:34,223 consumers 76103 8226964032 Message processor cancelled for 5cbf5af8-3e5d-479a-bd9d-ea8c61879f1b
+INFO 2025-09-19 06:02:34,228 consumers 76103 8226964032 WebSocket client connected: 6a0c5b82-6f3d-48ba-9d2c-894d8467d268
+INFO 2025-09-19 06:02:34,232 consumers 76103 8226964032 WebSocket client connected: 299a8610-2784-479a-bec8-ad25d8825af5
+INFO 2025-09-19 06:02:34,233 consumers 76103 8226964032 Subscribing client-1 to topic 'multi-test' with last_n=0
+INFO 2025-09-19 06:02:34,233 consumers 76103 8226964032 Creating new topic: multi-test
+INFO 2025-09-19 06:02:34,233 state 76103 8226964032 Created topic: multi-test
+INFO 2025-09-19 06:02:34,234 consumers 76103 8226964032 Successfully subscribed client-1 to topic 'multi-test'
+INFO 2025-09-19 06:02:34,234 consumers 76103 8226964032 Subscribing client-2 to topic 'multi-test' with last_n=0
+INFO 2025-09-19 06:02:34,235 consumers 76103 8226964032 Successfully subscribed client-2 to topic 'multi-test'
+INFO 2025-09-19 06:02:34,235 consumers 76103 8226964032 Publishing message b3c81f86-41d0-43af-a956-9067fe4e084f to topic 'multi-test' from 6a0c5b82-6f3d-48ba-9d2c-894d8467d268
+INFO 2025-09-19 06:02:34,235 consumers 76103 8226964032 Successfully published message b3c81f86-41d0-43af-a956-9067fe4e084f to topic 'multi-test'
+INFO 2025-09-19 06:02:36,238 consumers 76103 8226964032 WebSocket client disconnecting: 299a8610-2784-479a-bec8-ad25d8825af5, close_code: 1000
+INFO 2025-09-19 06:02:36,239 consumers 76103 8226964032 Unsubscribed 299a8610-2784-479a-bec8-ad25d8825af5 from topic 'multi-test'
+INFO 2025-09-19 06:02:36,239 consumers 76103 8226964032 WebSocket client disconnected: 299a8610-2784-479a-bec8-ad25d8825af5
+INFO 2025-09-19 06:02:36,239 consumers 76103 8226964032 Message processor cancelled for 299a8610-2784-479a-bec8-ad25d8825af5
+INFO 2025-09-19 06:02:36,240 consumers 76103 8226964032 WebSocket client disconnecting: 6a0c5b82-6f3d-48ba-9d2c-894d8467d268, close_code: 1000
+INFO 2025-09-19 06:02:36,240 consumers 76103 8226964032 Unsubscribed 6a0c5b82-6f3d-48ba-9d2c-894d8467d268 from topic 'multi-test'
+INFO 2025-09-19 06:02:36,240 consumers 76103 8226964032 WebSocket client disconnected: 6a0c5b82-6f3d-48ba-9d2c-894d8467d268
+INFO 2025-09-19 06:02:36,240 consumers 76103 8226964032 Message processor cancelled for 6a0c5b82-6f3d-48ba-9d2c-894d8467d268
+INFO 2025-09-19 06:03:51,291 views 76103 6194655232 REST API: Creating topic with data: {'name': 'orders'}
+WARNING 2025-09-19 06:03:51,292 views 76103 6194655232 REST API: Topic 'orders' already exists
+INFO 2025-09-19 06:04:04,673 views 76856 6184185856 REST API: Creating topic with data: {'name': 'orders'}
+INFO 2025-09-19 06:04:04,674 state 76856 6184185856 Created topic: orders
+INFO 2025-09-19 06:04:04,674 views 76856 6184185856 REST API: Successfully created topic 'orders'
+INFO 2025-09-19 06:04:04,678 views 76856 6184185856 REST API: Creating topic with data: {'name': 'orders'}
+WARNING 2025-09-19 06:04:04,678 views 76856 6184185856 REST API: Topic 'orders' already exists
+INFO 2025-09-19 06:04:04,683 views 76856 6184185856 REST API: Creating topic with data: {'name': 'inventory'}
+INFO 2025-09-19 06:04:04,683 state 76856 6184185856 Created topic: inventory
+INFO 2025-09-19 06:04:04,683 views 76856 6184185856 REST API: Successfully created topic 'inventory'
+INFO 2025-09-19 06:04:04,690 views 76856 6184185856 REST API: Creating topic with data: {'name': 'test-health'}
+INFO 2025-09-19 06:04:04,690 state 76856 6184185856 Created topic: test-health
+INFO 2025-09-19 06:04:04,690 views 76856 6184185856 REST API: Successfully created topic 'test-health'
+INFO 2025-09-19 06:07:42,366 views 76856 6184185856 REST API: Creating topic with data: {'name': 'test-topic'}
+INFO 2025-09-19 06:07:42,367 state 76856 6184185856 Created topic: test-topic
+INFO 2025-09-19 06:07:42,367 views 76856 6184185856 REST API: Successfully created topic 'test-topic'
+INFO 2025-09-19 06:07:42,372 views 76856 6184185856 REST API: Creating topic with data: {'name': 'test-topic'}
+WARNING 2025-09-19 06:07:42,372 views 76856 6184185856 REST API: Topic 'test-topic' already exists
+INFO 2025-09-19 06:07:42,381 state 76856 6184185856 Deleting topic 'test-topic' with 0 subscribers
+INFO 2025-09-19 06:07:42,381 state 76856 6184185856 Successfully deleted topic: test-topic
+WARNING 2025-09-19 06:07:42,385 state 76856 6184185856 Topic 'non-existent' not found for deletion
+INFO 2025-09-19 06:07:42,409 consumers 76856 8226964032 WebSocket client connected: 44c269b3-8d0d-4459-a3b8-aff7244f64e5
+INFO 2025-09-19 06:07:42,410 consumers 76856 8226964032 Subscribing test-client-1 to topic 'test-topic' with last_n=0
+INFO 2025-09-19 06:07:42,410 consumers 76856 8226964032 Creating new topic: test-topic
+INFO 2025-09-19 06:07:42,410 state 76856 8226964032 Created topic: test-topic
+INFO 2025-09-19 06:07:42,410 consumers 76856 8226964032 Successfully subscribed test-client-1 to topic 'test-topic'
+INFO 2025-09-19 06:07:42,411 consumers 76856 8226964032 Publishing message b69977f8-d891-407b-a6f6-2ea68575d5eb to topic 'test-topic' from 44c269b3-8d0d-4459-a3b8-aff7244f64e5
+INFO 2025-09-19 06:07:42,411 consumers 76856 8226964032 Successfully published message b69977f8-d891-407b-a6f6-2ea68575d5eb to topic 'test-topic'
+INFO 2025-09-19 06:07:42,412 consumers 76856 8226964032 Unsubscribed 44c269b3-8d0d-4459-a3b8-aff7244f64e5 from topic 'test-topic'
+INFO 2025-09-19 06:07:42,412 consumers 76856 8226964032 WebSocket client disconnecting: 44c269b3-8d0d-4459-a3b8-aff7244f64e5, close_code: 1000
+INFO 2025-09-19 06:07:42,413 consumers 76856 8226964032 WebSocket client disconnected: 44c269b3-8d0d-4459-a3b8-aff7244f64e5
+INFO 2025-09-19 06:07:42,413 consumers 76856 8226964032 Message processor cancelled for 44c269b3-8d0d-4459-a3b8-aff7244f64e5
+INFO 2025-09-19 06:07:42,415 consumers 76856 8226964032 WebSocket client connected: bd53a6e3-90c4-4277-98cc-a9a735dd3562
+INFO 2025-09-19 06:07:42,418 consumers 76856 8226964032 WebSocket client connected: 4c0379d9-f8a5-4218-b75a-3be68ed996d4
+INFO 2025-09-19 06:07:42,418 consumers 76856 8226964032 Subscribing client-1 to topic 'multi-test' with last_n=0
+INFO 2025-09-19 06:07:42,418 consumers 76856 8226964032 Creating new topic: multi-test
+INFO 2025-09-19 06:07:42,418 state 76856 8226964032 Created topic: multi-test
+INFO 2025-09-19 06:07:42,419 consumers 76856 8226964032 Successfully subscribed client-1 to topic 'multi-test'
+INFO 2025-09-19 06:07:42,419 consumers 76856 8226964032 Subscribing client-2 to topic 'multi-test' with last_n=0
+INFO 2025-09-19 06:07:42,419 consumers 76856 8226964032 Successfully subscribed client-2 to topic 'multi-test'
+INFO 2025-09-19 06:07:42,420 consumers 76856 8226964032 Publishing message dd7fc957-bfe9-4eb6-b18c-4cd8e1851532 to topic 'multi-test' from bd53a6e3-90c4-4277-98cc-a9a735dd3562
+INFO 2025-09-19 06:07:42,420 consumers 76856 8226964032 Successfully published message dd7fc957-bfe9-4eb6-b18c-4cd8e1851532 to topic 'multi-test'
+INFO 2025-09-19 06:07:42,420 consumers 76856 8226964032 WebSocket client disconnecting: 4c0379d9-f8a5-4218-b75a-3be68ed996d4, close_code: 1000
+INFO 2025-09-19 06:07:42,420 consumers 76856 8226964032 Unsubscribed 4c0379d9-f8a5-4218-b75a-3be68ed996d4 from topic 'multi-test'
+INFO 2025-09-19 06:07:42,420 consumers 76856 8226964032 WebSocket client disconnected: 4c0379d9-f8a5-4218-b75a-3be68ed996d4
+INFO 2025-09-19 06:07:42,420 consumers 76856 8226964032 Message processor cancelled for 4c0379d9-f8a5-4218-b75a-3be68ed996d4
+INFO 2025-09-19 06:07:42,421 consumers 76856 8226964032 WebSocket client disconnecting: bd53a6e3-90c4-4277-98cc-a9a735dd3562, close_code: 1000
+INFO 2025-09-19 06:07:42,421 consumers 76856 8226964032 Unsubscribed bd53a6e3-90c4-4277-98cc-a9a735dd3562 from topic 'multi-test'
+INFO 2025-09-19 06:07:42,421 consumers 76856 8226964032 WebSocket client disconnected: bd53a6e3-90c4-4277-98cc-a9a735dd3562
+INFO 2025-09-19 06:07:42,421 consumers 76856 8226964032 Message processor cancelled for bd53a6e3-90c4-4277-98cc-a9a735dd3562
+INFO 2025-09-19 06:12:28,781 consumers 76856 8226964032 WebSocket client connected: 96827dfd-176b-4af3-9145-cc83c3986d55
+INFO 2025-09-19 06:12:41,737 consumers 76856 8226964032 Subscribing c1 to topic 'orders' with last_n=0
+INFO 2025-09-19 06:12:41,738 consumers 76856 8226964032 Successfully subscribed c1 to topic 'orders'
+INFO 2025-09-19 06:12:58,170 consumers 76856 8226964032 WebSocket client connected: c74cb0f5-9418-40a5-b2d7-b9a77e88c85a
+INFO 2025-09-19 06:14:02,058 consumers 76856 8226964032 WebSocket client disconnecting: c74cb0f5-9418-40a5-b2d7-b9a77e88c85a, close_code: 1006
+INFO 2025-09-19 06:14:02,059 consumers 76856 8226964032 WebSocket client disconnected: c74cb0f5-9418-40a5-b2d7-b9a77e88c85a
+INFO 2025-09-19 06:14:03,014 consumers 76856 8226964032 WebSocket client connected: 2b10b54b-a866-4218-93d7-ea0a0ddf42d0
+INFO 2025-09-19 06:14:04,028 consumers 76856 8226964032 Publishing message 550e8400-e29b-41d4-a716-446655440000 to topic 'orders' from 2b10b54b-a866-4218-93d7-ea0a0ddf42d0
+INFO 2025-09-19 06:14:04,029 consumers 76856 8226964032 Successfully published message 550e8400-e29b-41d4-a716-446655440000 to topic 'orders'
+INFO 2025-09-19 06:19:46,025 consumers 80899 8226964032 WebSocket client connected: 19cb07ab-35cd-4b5e-9f76-d3d902168352
+INFO 2025-09-19 06:19:59,348 consumers 80899 8226964032 WebSocket client disconnecting: 19cb07ab-35cd-4b5e-9f76-d3d902168352, close_code: 1006
+INFO 2025-09-19 06:19:59,348 consumers 80899 8226964032 WebSocket client disconnected: 19cb07ab-35cd-4b5e-9f76-d3d902168352
+INFO 2025-09-19 06:20:13,006 consumers 80899 8226964032 WebSocket client connected: cdfe3b44-e18f-4255-adeb-6058520a59a6
+INFO 2025-09-19 06:20:14,448 consumers 80899 8226964032 Subscribing c1 to topic 'orders' with last_n=0
+INFO 2025-09-19 06:20:14,448 consumers 80899 8226964032 Creating new topic: orders
+INFO 2025-09-19 06:20:14,448 state 80899 8226964032 Created topic: orders
+INFO 2025-09-19 06:20:14,449 consumers 80899 8226964032 Successfully subscribed c1 to topic 'orders'
+ERROR 2025-09-19 06:20:14,449 consumers 80899 8226964032 Message processor error for cdfe3b44-e18f-4255-adeb-6058520a59a6: 'str' object has no attribute 'client_id'
+INFO 2025-09-19 06:20:24,286 consumers 80899 8226964032 WebSocket client connected: 0485323e-3ed9-4062-830a-884c534b579d
+INFO 2025-09-19 06:20:26,864 consumers 80899 8226964032 Publishing message 550e8400-e29b-41d4-a716-446655440000 to topic 'orders' from 0485323e-3ed9-4062-830a-884c534b579d
+INFO 2025-09-19 06:20:26,865 consumers 80899 8226964032 Successfully published message 550e8400-e29b-41d4-a716-446655440000 to topic 'orders'
+INFO 2025-09-19 06:21:26,771 consumers 80899 8226964032 WebSocket client disconnecting: 0485323e-3ed9-4062-830a-884c534b579d, close_code: 1006
+INFO 2025-09-19 06:21:26,772 consumers 80899 8226964032 WebSocket client disconnected: 0485323e-3ed9-4062-830a-884c534b579d
+INFO 2025-09-19 06:21:28,357 consumers 80899 8226964032 WebSocket client connected: 4087b7bc-d4f3-4b92-a559-ca990a5511fc
+INFO 2025-09-19 06:21:31,651 consumers 80899 8226964032 WebSocket client disconnecting: cdfe3b44-e18f-4255-adeb-6058520a59a6, close_code: 1006
+INFO 2025-09-19 06:21:31,651 consumers 80899 8226964032 Unsubscribed cdfe3b44-e18f-4255-adeb-6058520a59a6 from topic 'orders'
+INFO 2025-09-19 06:21:31,651 consumers 80899 8226964032 WebSocket client disconnected: cdfe3b44-e18f-4255-adeb-6058520a59a6
+INFO 2025-09-19 06:21:32,746 consumers 80899 8226964032 WebSocket client connected: 339a55b0-db11-4bbb-a8bc-e1f93cc3a566
+INFO 2025-09-19 06:21:38,455 consumers 80899 8226964032 Subscribing c1 to topic 'orders' with last_n=0
+INFO 2025-09-19 06:21:38,455 consumers 80899 8226964032 Successfully subscribed c1 to topic 'orders'
+ERROR 2025-09-19 06:21:38,455 consumers 80899 8226964032 Message processor error for 339a55b0-db11-4bbb-a8bc-e1f93cc3a566: 'str' object has no attribute 'client_id'
+INFO 2025-09-19 06:21:44,249 consumers 80899 8226964032 Subscribing c1 to topic 'orders' with last_n=0
+INFO 2025-09-19 06:21:44,249 consumers 80899 8226964032 Successfully subscribed c1 to topic 'orders'
+ERROR 2025-09-19 06:21:44,249 consumers 80899 8226964032 Message processor error for 4087b7bc-d4f3-4b92-a559-ca990a5511fc: 'str' object has no attribute 'client_id'
+INFO 2025-09-19 06:21:51,584 consumers 80899 8226964032 Publishing message 550e8400-e29b-41d4-a716-446655440000 to topic 'orders' from 4087b7bc-d4f3-4b92-a559-ca990a5511fc
+INFO 2025-09-19 06:21:51,584 consumers 80899 8226964032 Successfully published message 550e8400-e29b-41d4-a716-446655440000 to topic 'orders'
+INFO 2025-09-19 06:22:18,744 consumers 80899 8226964032 WebSocket client disconnecting: 4087b7bc-d4f3-4b92-a559-ca990a5511fc, close_code: 1006
+INFO 2025-09-19 06:22:18,744 consumers 80899 8226964032 Unsubscribed 4087b7bc-d4f3-4b92-a559-ca990a5511fc from topic 'orders'
+INFO 2025-09-19 06:22:18,744 consumers 80899 8226964032 WebSocket client disconnected: 4087b7bc-d4f3-4b92-a559-ca990a5511fc
+INFO 2025-09-19 06:22:21,185 consumers 80899 8226964032 WebSocket client connected: 1aaedbba-f9bd-470b-8cc7-30f36ca337ef
+INFO 2025-09-19 06:22:23,475 consumers 80899 8226964032 Publishing message 550e8400-e29b-41d4-a716-446655440000 to topic 'orders' from 1aaedbba-f9bd-470b-8cc7-30f36ca337ef
+INFO 2025-09-19 06:22:23,475 consumers 80899 8226964032 Successfully published message 550e8400-e29b-41d4-a716-446655440000 to topic 'orders'
+INFO 2025-09-19 06:24:44,045 consumers 80899 8226964032 WebSocket client disconnecting: 339a55b0-db11-4bbb-a8bc-e1f93cc3a566, close_code: 1006
+INFO 2025-09-19 06:24:44,046 consumers 80899 8226964032 Unsubscribed 339a55b0-db11-4bbb-a8bc-e1f93cc3a566 from topic 'orders'
+INFO 2025-09-19 06:24:44,047 consumers 80899 8226964032 WebSocket client disconnected: 339a55b0-db11-4bbb-a8bc-e1f93cc3a566
+INFO 2025-09-19 06:24:50,438 consumers 80899 8226964032 WebSocket client connected: c616ed19-7ee3-4690-a551-fdebf43c2f17
+INFO 2025-09-19 06:24:59,282 consumers 80899 8226964032 Subscribing c1 to topic 'orders' with last_n=0
+INFO 2025-09-19 06:24:59,282 consumers 80899 8226964032 Successfully subscribed c1 to topic 'orders'
+ERROR 2025-09-19 06:24:59,282 consumers 80899 8226964032 Message processor error for c616ed19-7ee3-4690-a551-fdebf43c2f17: 'str' object has no attribute 'client_id'
+INFO 2025-09-19 06:25:03,027 consumers 80899 8226964032 WebSocket client disconnecting: 1aaedbba-f9bd-470b-8cc7-30f36ca337ef, close_code: 1006
+INFO 2025-09-19 06:25:03,028 consumers 80899 8226964032 WebSocket client disconnected: 1aaedbba-f9bd-470b-8cc7-30f36ca337ef
+INFO 2025-09-19 06:25:04,094 consumers 80899 8226964032 WebSocket client connected: a3ad038b-a98c-4bb2-8f6e-ffc82ca745f5
+INFO 2025-09-19 06:25:09,473 consumers 80899 8226964032 Publishing message 550e8400-e29b-41d4-a716-446655440000 to topic 'orders' from a3ad038b-a98c-4bb2-8f6e-ffc82ca745f5
+INFO 2025-09-19 06:25:09,473 consumers 80899 8226964032 Successfully published message 550e8400-e29b-41d4-a716-446655440000 to topic 'orders'
+INFO 2025-09-19 06:26:03,359 consumers 80899 8226964032 WebSocket client disconnecting: a3ad038b-a98c-4bb2-8f6e-ffc82ca745f5, close_code: 1006
+INFO 2025-09-19 06:26:03,360 consumers 80899 8226964032 WebSocket client disconnected: a3ad038b-a98c-4bb2-8f6e-ffc82ca745f5
+INFO 2025-09-19 06:29:36,196 consumers 80899 8226964032 WebSocket client disconnecting: c616ed19-7ee3-4690-a551-fdebf43c2f17, close_code: 1006
+INFO 2025-09-19 06:29:36,199 consumers 80899 8226964032 Unsubscribed c616ed19-7ee3-4690-a551-fdebf43c2f17 from topic 'orders'
+INFO 2025-09-19 06:29:36,199 consumers 80899 8226964032 WebSocket client disconnected: c616ed19-7ee3-4690-a551-fdebf43c2f17
+INFO 2025-09-19 06:29:38,254 views 80899 6167064576 REST API: Creating topic with data: {'name': 'test-topic'}
+INFO 2025-09-19 06:29:38,255 state 80899 6167064576 Created topic: test-topic
+INFO 2025-09-19 06:29:38,255 views 80899 6167064576 REST API: Successfully created topic 'test-topic'
+INFO 2025-09-19 06:29:38,260 views 80899 6167064576 REST API: Creating topic with data: {'name': 'test-topic'}
+WARNING 2025-09-19 06:29:38,260 views 80899 6167064576 REST API: Topic 'test-topic' already exists
+INFO 2025-09-19 06:29:38,275 state 80899 6167064576 Deleting topic 'test-topic' with 0 subscribers
+INFO 2025-09-19 06:29:38,275 state 80899 6167064576 Successfully deleted topic: test-topic
+WARNING 2025-09-19 06:29:38,281 state 80899 6167064576 Topic 'non-existent' not found for deletion
+INFO 2025-09-19 06:29:38,330 consumers 80899 8226964032 WebSocket client connected: ab5c6b55-a2f9-4f78-b47a-eb5c5a83c5d6
+INFO 2025-09-19 06:29:38,331 consumers 80899 8226964032 Subscribing test-client-1 to topic 'test-topic' with last_n=0
+INFO 2025-09-19 06:29:38,331 consumers 80899 8226964032 Creating new topic: test-topic
+INFO 2025-09-19 06:29:38,331 state 80899 8226964032 Created topic: test-topic
+INFO 2025-09-19 06:29:38,331 consumers 80899 8226964032 Successfully subscribed test-client-1 to topic 'test-topic'
+ERROR 2025-09-19 06:29:38,331 consumers 80899 8226964032 Message processor error for ab5c6b55-a2f9-4f78-b47a-eb5c5a83c5d6: 'str' object has no attribute 'client_id'
+INFO 2025-09-19 06:29:38,332 consumers 80899 8226964032 Publishing message 90f5303a-27c3-41d3-93e0-a14976a33003 to topic 'test-topic' from ab5c6b55-a2f9-4f78-b47a-eb5c5a83c5d6
+INFO 2025-09-19 06:29:38,332 consumers 80899 8226964032 Successfully published message 90f5303a-27c3-41d3-93e0-a14976a33003 to topic 'test-topic'
+INFO 2025-09-19 06:29:38,332 consumers 80899 8226964032 Unsubscribed ab5c6b55-a2f9-4f78-b47a-eb5c5a83c5d6 from topic 'test-topic'
+INFO 2025-09-19 06:29:38,333 consumers 80899 8226964032 WebSocket client disconnecting: ab5c6b55-a2f9-4f78-b47a-eb5c5a83c5d6, close_code: 1000
+INFO 2025-09-19 06:29:38,333 consumers 80899 8226964032 WebSocket client disconnected: ab5c6b55-a2f9-4f78-b47a-eb5c5a83c5d6
+INFO 2025-09-19 06:29:38,336 consumers 80899 8226964032 WebSocket client connected: ac5e214d-f70b-40a5-8965-38827873e112
+INFO 2025-09-19 06:29:38,341 consumers 80899 8226964032 WebSocket client connected: 0d476aef-c7a9-41ef-be52-0c0444bdffe5
+INFO 2025-09-19 06:29:38,341 consumers 80899 8226964032 Subscribing client-1 to topic 'multi-test' with last_n=0
+INFO 2025-09-19 06:29:38,341 consumers 80899 8226964032 Creating new topic: multi-test
+INFO 2025-09-19 06:29:38,341 state 80899 8226964032 Created topic: multi-test
+INFO 2025-09-19 06:29:38,341 consumers 80899 8226964032 Successfully subscribed client-1 to topic 'multi-test'
+ERROR 2025-09-19 06:29:38,342 consumers 80899 8226964032 Message processor error for ac5e214d-f70b-40a5-8965-38827873e112: 'str' object has no attribute 'client_id'
+INFO 2025-09-19 06:29:38,342 consumers 80899 8226964032 Subscribing client-2 to topic 'multi-test' with last_n=0
+INFO 2025-09-19 06:29:38,342 consumers 80899 8226964032 Successfully subscribed client-2 to topic 'multi-test'
+ERROR 2025-09-19 06:29:38,342 consumers 80899 8226964032 Message processor error for 0d476aef-c7a9-41ef-be52-0c0444bdffe5: 'str' object has no attribute 'client_id'
+INFO 2025-09-19 06:29:38,343 consumers 80899 8226964032 Publishing message 03604688-d214-47ac-82ce-39edd3a66fc2 to topic 'multi-test' from ac5e214d-f70b-40a5-8965-38827873e112
+INFO 2025-09-19 06:29:38,343 consumers 80899 8226964032 Successfully published message 03604688-d214-47ac-82ce-39edd3a66fc2 to topic 'multi-test'
+INFO 2025-09-19 06:29:38,343 consumers 80899 8226964032 WebSocket client disconnecting: 0d476aef-c7a9-41ef-be52-0c0444bdffe5, close_code: 1000
+INFO 2025-09-19 06:29:38,343 consumers 80899 8226964032 Unsubscribed 0d476aef-c7a9-41ef-be52-0c0444bdffe5 from topic 'multi-test'
+INFO 2025-09-19 06:29:38,343 consumers 80899 8226964032 WebSocket client disconnected: 0d476aef-c7a9-41ef-be52-0c0444bdffe5
+INFO 2025-09-19 06:29:38,343 consumers 80899 8226964032 WebSocket client disconnecting: ac5e214d-f70b-40a5-8965-38827873e112, close_code: 1000
+INFO 2025-09-19 06:29:38,344 consumers 80899 8226964032 Unsubscribed ac5e214d-f70b-40a5-8965-38827873e112 from topic 'multi-test'
+INFO 2025-09-19 06:29:38,344 consumers 80899 8226964032 WebSocket client disconnected: ac5e214d-f70b-40a5-8965-38827873e112
+INFO 2025-09-19 06:30:53,662 consumers 85191 8226964032 WebSocket client connected: 5008ac6c-a7f1-446f-b740-d95f2f569e59
+INFO 2025-09-19 06:30:53,663 consumers 85191 8226964032 Subscribing test-subscriber to topic 'event-test' with last_n=0
+INFO 2025-09-19 06:30:53,663 consumers 85191 8226964032 Creating new topic: event-test
+INFO 2025-09-19 06:30:53,663 state 85191 8226964032 Created topic: event-test
+INFO 2025-09-19 06:30:53,663 consumers 85191 8226964032 Successfully subscribed test-subscriber to topic 'event-test'
+INFO 2025-09-19 06:30:53,664 consumers 85191 8226964032 Publishing message d493e17e-191c-412d-bcd5-48de7c27f16a to topic 'event-test' from 5008ac6c-a7f1-446f-b740-d95f2f569e59
+INFO 2025-09-19 06:30:53,664 consumers 85191 8226964032 Successfully published message d493e17e-191c-412d-bcd5-48de7c27f16a to topic 'event-test'
+INFO 2025-09-19 06:30:53,664 consumers 85191 8226964032 WebSocket client disconnecting: 5008ac6c-a7f1-446f-b740-d95f2f569e59, close_code: 1000
+INFO 2025-09-19 06:30:53,664 consumers 85191 8226964032 Unsubscribed test-subscriber from topic 'event-test'
+INFO 2025-09-19 06:30:53,665 consumers 85191 8226964032 WebSocket client disconnected: 5008ac6c-a7f1-446f-b740-d95f2f569e59
+INFO 2025-09-19 06:30:53,665 consumers 85191 8226964032 Message processor cancelled for 5008ac6c-a7f1-446f-b740-d95f2f569e59
+INFO 2025-09-19 06:31:33,174 consumers 85191 8226964032 WebSocket client connected: 5d319d29-d4c2-4cad-bbc8-c19982e3f01c
+INFO 2025-09-19 06:32:22,461 consumers 86144 8226964032 WebSocket client connected: aff6ac1c-8cf8-4785-ad99-0ae77e404f78
+INFO 2025-09-19 06:32:43,581 consumers 86144 8226964032 Subscribing c1 to topic 'orders' with last_n=0
+INFO 2025-09-19 06:32:43,582 consumers 86144 8226964032 Creating new topic: orders
+INFO 2025-09-19 06:32:43,582 state 86144 8226964032 Created topic: orders
+INFO 2025-09-19 06:32:43,582 consumers 86144 8226964032 Successfully subscribed c1 to topic 'orders'
+INFO 2025-09-19 06:32:57,156 consumers 86144 8226964032 WebSocket client connected: db6a564c-d0b9-4abb-ae64-c290075052c1
+INFO 2025-09-19 06:33:09,498 consumers 86144 8226964032 Publishing message 550e8400-e29b-41d4-a716-446655440000 to topic 'orders' from db6a564c-d0b9-4abb-ae64-c290075052c1
+INFO 2025-09-19 06:33:09,501 consumers 86144 8226964032 Successfully published message 550e8400-e29b-41d4-a716-446655440000 to topic 'orders'
+INFO 2025-09-19 06:33:14,183 consumers 86144 8226964032 WebSocket client disconnecting: aff6ac1c-8cf8-4785-ad99-0ae77e404f78, close_code: 1006
+INFO 2025-09-19 06:33:14,183 consumers 86144 8226964032 Unsubscribed c1 from topic 'orders'
+INFO 2025-09-19 06:33:14,183 consumers 86144 8226964032 WebSocket client disconnected: aff6ac1c-8cf8-4785-ad99-0ae77e404f78
+INFO 2025-09-19 06:33:14,183 consumers 86144 8226964032 Message processor cancelled for aff6ac1c-8cf8-4785-ad99-0ae77e404f78
