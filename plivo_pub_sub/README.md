@@ -21,38 +21,50 @@ A simplified in-memory Pub/Sub system built with Django and Django Channels, sup
 
 ## Quick Start
 
-### 1. Install Dependencies
+### 🐳 Docker (Recommended)
 
+**1. Build and Run:**
+```bash
+docker build -t plivo-pubsub .
+docker run -d -p 8000:8000 plivo-pubsub
+```
+
+**2. Test the System:**
+```bash
+python test_docker.py
+```
+
+**3. Custom Configuration:**
+```bash
+docker run -d -p 8000:8000 \
+  -e PUBSUB_API_KEYS=my-key-1,my-key-2 \
+  -e PUBSUB_SUBSCRIBER_QUEUE_SIZE=100 \
+  plivo-pubsub
+```
+
+### 🔧 Local Development
+
+**1. Install Dependencies:**
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Run the Server
-
-For development with both HTTP and WebSocket support:
-
+**2. Run the Server:**
 ```bash
+# Full WebSocket + HTTP support
 daphne -b 0.0.0.0 -p 8000 plivo_pub_sub.asgi:application
-```
 
-Or for HTTP-only testing:
-
-```bash
+# HTTP-only for testing
 python manage.py runserver
 ```
 
-### 3. Test the System
-
-Run the comprehensive test suite:
-
+**3. Test the System:**
 ```bash
+# Comprehensive test suite
 python test_pubsub.py
-```
 
-Or try the example client:
-
-```bash
-python example_client.py
+# Docker-specific tests (if running in Docker)
+python test_docker.py
 ```
 
 ### 4. View Logs
@@ -73,20 +85,35 @@ python logging_demo.py
 
 ### Authentication
 
-All endpoints require X-API-Key authentication. Valid keys for demo: `plivo-test-key`, `demo-key`, `test-123`.
+All endpoints require X-API-Key authentication.
+
+**Default Keys**: `plivo-test-key`, `demo-key`, `test-123`  
+**Custom Keys**: Configure via `PUBSUB_API_KEYS` environment variable
 
 **REST API**: Include in header `X-API-Key: your-key-here` or query parameter `?api_key=your-key-here`
 
 **WebSocket**: Include in header `X-API-Key: your-key-here` or query parameter `?api_key=your-key-here`
 
-Example WebSocket connection:
-```javascript
-const ws = new WebSocket('ws://localhost:8000/ws/?api_key=plivo-test-key');
+**Examples:**
+```bash
+# REST API
+curl -H "X-API-Key: plivo-test-key" http://localhost:8000/health/
+
+# WebSocket (JavaScript)
+const ws = new WebSocket('ws://localhost:8000/ws?api_key=plivo-test-key');
+```
+
+**Docker with Custom Keys:**
+```bash
+docker run -d -p 8000:8000 \
+  -e PUBSUB_API_KEYS=prod-key-1,prod-key-2,prod-key-3 \
+  plivo-pubsub
 ```
 
 ### WebSocket Protocol
 
-Connect to `ws://localhost:8000/ws/?api_key=your-key-here`
+**Connection URL**: `ws://localhost:8000/ws?api_key=your-key-here`  
+**Note**: Both `/ws` and `/ws/` are supported
 
 #### Client → Server Messages
 
@@ -127,6 +154,7 @@ Connect to `ws://localhost:8000/ws/?api_key=your-key-here`
   "request_id": "uuid-optional"
 }
 ```
+**Note**: `message.id` must be a valid UUID
 
 **Ping:**
 ```json
@@ -242,6 +270,21 @@ POST /shutdown/
 X-API-Key: plivo-test-key
 ```
 
+**Response Examples:**
+```json
+{
+  "topics": [
+    {
+      "name": "orders",
+      "subscribers": 2,
+      "ring_buffer_size": 100,
+      "messages_in_history": 45,
+      "total_messages": 1250
+    }
+  ]
+}
+```
+
 ## Policies and Configuration
 
 ### Backpressure Policy
@@ -279,9 +322,28 @@ The system supports graceful shutdown with the following behavior:
 
 ## Configuration
 
-### Quick Configuration
+### Docker Configuration (Recommended)
 
-Set environment variables to customize behavior:
+```bash
+# Basic configuration
+docker run -d -p 8000:8000 \
+  -e PUBSUB_API_KEYS=my-key-1,my-key-2,my-key-3 \
+  -e PUBSUB_SUBSCRIBER_QUEUE_SIZE=100 \
+  -e PUBSUB_DEFAULT_RING_BUFFER_SIZE=200 \
+  plivo-pubsub
+
+# Production configuration
+docker run -d -p 8000:8000 \
+  -e PUBSUB_API_KEYS=prod-key-1,prod-key-2 \
+  -e PUBSUB_SUBSCRIBER_QUEUE_SIZE=200 \
+  -e PUBSUB_DEFAULT_RING_BUFFER_SIZE=500 \
+  -e PUBSUB_SLOW_CONSUMER_THRESHOLD=10 \
+  -e DEBUG=false \
+  -e SECRET_KEY=production-secret-key \
+  plivo-pubsub
+```
+
+### Local Development Configuration
 
 ```bash
 # API Keys (comma-separated)
@@ -296,10 +358,10 @@ export PUBSUB_SLOW_CONSUMER_THRESHOLD=5
 ### Full Configuration Guide
 
 See [CONFIGURATION.md](CONFIGURATION.md) for complete configuration options including:
-- API key management
-- Performance tuning
-- Docker configuration  
-- Production recommendations
+- Environment variables reference
+- Performance tuning recommendations
+- Production deployment guidelines
+- Security best practices
 
 ### Backpressure Policy
 
@@ -396,7 +458,66 @@ CMD ["daphne", "-b", "0.0.0.0", "-p", "8000", "plivo_pub_sub.asgi:application"]
 Build and run:
 ```bash
 docker build -t plivo-pubsub .
-docker run -p 8000:8000 plivo-pubsub
+docker run -d -p 8000:8000 plivo-pubsub
+```
+
+## Testing
+
+### Automated Testing
+
+**Docker Environment (Recommended):**
+```bash
+# Test the running container
+python test_docker.py
+
+# Expected output: 5/5 tests passed
+```
+
+**Local Development:**
+```bash
+# Start server first
+daphne -b 0.0.0.0 -p 8000 plivo_pub_sub.asgi:application
+
+# Run tests in another terminal
+python test_pubsub.py
+```
+
+### Manual Testing
+
+**Health Check:**
+```bash
+curl -H "X-API-Key: plivo-test-key" http://localhost:8000/health/
+```
+
+**WebSocket Test (JavaScript):**
+```javascript
+const ws = new WebSocket('ws://localhost:8000/ws?api_key=plivo-test-key');
+
+ws.onopen = function() {
+    // Subscribe to topic
+    ws.send(JSON.stringify({
+        type: 'subscribe',
+        topic: 'test-topic', 
+        client_id: 'test-client'
+    }));
+};
+
+ws.onmessage = function(event) {
+    console.log('Received:', JSON.parse(event.data));
+};
+```
+
+### Troubleshooting
+
+**Common Issues:**
+- **WebSocket 500 error**: Check API key and ensure message IDs are valid UUIDs
+- **Authentication failures**: Verify API key in header or query parameter
+- **Port conflicts**: Stop existing containers: `docker stop <container-id>`
+
+**Check Logs:**
+```bash
+docker logs <container-id>  # For Docker
+tail -f pubsub.log          # For local development
 ```
 
 ## Assumptions and Design Choices
@@ -415,6 +536,28 @@ docker run -p 8000:8000 plivo-pubsub
 - **Concurrent Connections**: Limited by system resources
 - **Message Throughput**: Optimized for real-time delivery
 - **Scalability**: Single-instance design (no clustering)
+
+## Feature Summary
+
+✅ **Core Requirements**
+- WebSocket endpoint (`/ws`) for pub/sub operations
+- REST API for topic management and observability
+- In-memory state management (no external dependencies)
+- Thread-safe concurrent operations
+
+✅ **Advanced Features**
+- **Backpressure Handling**: Bounded queues with SLOW_CONSUMER disconnection
+- **Graceful Shutdown**: Clean shutdown with message flushing
+- **Message Replay**: Configurable ring buffer with `last_n` support
+- **Authentication**: X-API-Key for all REST and WebSocket endpoints
+- **Configuration**: Environment-based settings for production deployment
+
+✅ **Production Ready**
+- Docker containerization with multi-stage builds
+- Comprehensive logging and monitoring
+- Health and statistics endpoints
+- Configurable performance parameters
+- Complete test suite with Docker support
 
 ## License
 
